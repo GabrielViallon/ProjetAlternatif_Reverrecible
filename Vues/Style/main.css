@@ -39,7 +39,7 @@ li a:hover{
 }
 
 #logoMenu:hover {
-  width: 26%;
+  /* background-color: #f2f2f2; */
 }
 
 #logoMenu a:hover{
