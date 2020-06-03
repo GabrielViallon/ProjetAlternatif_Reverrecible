@@ -126,7 +126,7 @@ nav li a:hover{
 }
 
 #logoMenu a:hover{
-  border-bottom: none;
+  /* border-bottom: none; */
 }
 
 #imgBackground {
