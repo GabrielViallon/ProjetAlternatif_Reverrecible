@@ -3,32 +3,30 @@
   <head>
     <meta charset="utf-8">
       <link rel="stylesheet" href="../Vues/Style/main.css">
-    <title>Contact</title>
+    <title>Reverrecible - Contact</title>
   </head>
   <body>
     <header>
       <nav>
       <ul>
         <li id="logoMenu"><a href="main.html"><img src="Style/Logo.png" alt="logo"></a></li>
-        <li><h3><a href="quisommesnous.html">QUI SOMMES NOUS ?</a></h3></li>
+        <li><a href="quisommesnous.html"><h3>QUI SOMMES NOUS ?</h3></a></li>
         <li><a href="consigne.html"><h3>CONSIGNE</h3></a></li>
         <li><a href="#"><h3>AUTRES</h3></a></li>
         <li id="pageSelectionee"><a href="#"><h3>CONTACT</h3></a></li>
       </ul>
     </nav>
-    <div>
+    <!-- <div>
       <img src="Style/HEADER_LANDSCAPE_Contact.jpg" alt="" align="center">
-    </div>
+    </div> -->
     <div class="separateurTop"></div>
     </header>
     <h1>PARTANT POUR L'AVENTURE ? CONTACTEZ-NOUS !</h1>
     <div class="separateur"></div>
 
-    <div class="d-flex flex-wrap text-center pt-5 align-items-start justify-content-around">
-      <div class="">
-          <p>
-              <img src="../Vues/Style/enveloppe.png" alt="enveloppe">
-          </p>
+    <article>
+      <div class="sousArticle">
+        <h2>CONTACT PAR MAIL</h2>
           <fieldset>
 
           <form action="../controle/contact.ctrl.php" method="post" class="formulaire-email">
@@ -44,13 +42,14 @@
           </form>
           <!-- <?php     global $confirmation; ?> -->
           <!-- <p style='color:green'> <?= $confirmation ?></p> -->
-      </div>
-      </fieldset>
-      <div class="separateur"></div>
-      <h1>RESEAUX SOCIAUX</h1>
+        </fieldset>
+    </div>
+    </article>
       <div class="separateur"></div>
 
-    <div class="mt-5 text-center" id="fb-root">
+    <article>
+      <div class="sousArticle">
+    <h2>RESEAUX SOCIAUX</h2>
       <script async defer crossorigin="anonymous"
               src="https://connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v5.0"></script>
       <div class="fb-page"
@@ -67,5 +66,6 @@
         </blockquote>
       </div>
     </div>
+    </article>
   </body>
 </html>
