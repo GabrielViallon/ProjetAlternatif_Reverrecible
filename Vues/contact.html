@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+      <link rel="stylesheet" href="../Vues/Style/main.css">
+    <title>Contact</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+      <ul>
+        <li id="logoMenu"><a href="main.html"><img src="Style/Logo.png" alt="logo"></a></li>
+        <li><h3><a href="quisommesnous.html">QUI SOMMES NOUS ?</a></h3></li>
+        <li><a href="consigne.html"><h3>CONSIGNE</h3></a></li>
+        <li><a href="#"><h3>AUTRES</h3></a></li>
+        <li id="pageSelectionee"><a href="#"><h3>CONTACT</h3></a></li>
+      </ul>
+    </nav>
+    <div>
+      <img src="Style/HEADER_LANDSCAPE_Contact.jpg" alt="" align="center">
+    </div>
+    <div class="separateurTop"></div>
+    </header>
+    <h1>PARTANT POUR L'AVENTURE ? CONTACTEZ-NOUS !</h1>
+    <div class="separateur"></div>
+
+    <div class="d-flex flex-wrap text-center pt-5 align-items-start justify-content-around">
+      <div class="">
+          <p>
+              <img src="../Vues/Style/enveloppe.png" alt="enveloppe">
+          </p>
+          <fieldset>
+
+          <form action="../controle/contact.ctrl.php" method="post" class="formulaire-email">
+            <input type="email" name="email" size="40" required placeholder="E-mail" >
+            <br>
+            <input type="text" name="nom"  size="40" required  placeholder="Nom" >
+            <br>
+            <input type="text" name="sujet" size="40"  required placeholder="Sujet" >
+            <br>
+            <textarea name="message" required placeholder="Entrez votre message" ></textarea>
+            <br>
+            <input type="submit" class="bouton" value="ENVOYER">
+          </form>
+          <!-- <?php     global $confirmation; ?> -->
+          <!-- <p style='color:green'> <?= $confirmation ?></p> -->
+      </div>
+      </fieldset>
+      <div class="separateur"></div>
+      <h1>RESEAUX SOCIAUX</h1>
+      <div class="separateur"></div>
+
+    <div class="mt-5 text-center" id="fb-root">
+      <script async defer crossorigin="anonymous"
+              src="https://connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v5.0"></script>
+      <div class="fb-page"
+      data-href="https://www.facebook.com/reverrecible/"
+      data-tabs="timeline" data-width="2000"
+      data-height="0"
+      data-small-header="false"
+      data-adapt-container-width="true"
+      data-hide-cover="true"
+      data-show-facepile="true">
+        <blockquote cite="https://www.facebook.com/reverrecible/"
+                    class="fb-xfbml-parse-ignore">
+          <a href="https://www.facebook.com/reverrecible/">Reverrecible</a>
+        </blockquote>
+      </div>
+    </div>
+  </body>
+</html>
