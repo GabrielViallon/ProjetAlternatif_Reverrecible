@@ -240,3 +240,9 @@ form input[type=submit] {
    padding: 20px 70px;
    background-color: white;
 }
+
+#cartePoints {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
