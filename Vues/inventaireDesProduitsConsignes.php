@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="../Vues/Style/main.css">
-    <title>Dons - Reverrecible</title>
+    <title>Points de collecte - Reverrecible</title>
   </head>
   <body>
     <header>
@@ -23,18 +23,16 @@
         </li>
       </ul>
     </nav>
-    <!-- <div>
-      <img src="Style/HEADER_LANDSCAPE_Contact.jpg" alt="" align="center">
-    </div> -->
     <div class="separateurTop"></div>
     </header>
-    <h1>FAIRE UN DON A REVERRECIBLE</h1>
+    <h1>INVENTAIRE DES PRODUITS CONSIGNES</h1>
     <div class="separateur"></div>
-    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-    <input type="hidden" name="cmd" value="_s-xclick" />
-    <input type="hidden" name="hosted_button_id" value="DU3ZZ6ZZ9NYRJ" />
-    <input type="image" src="https://www.paypalobjects.com/fr_FR/FR/i/btn/btn_donateCC_LG.gif" border="0" name="submit" title="Donner à Reverrecible via PayPal" alt="Bouton Faites un don avec PayPal" />
-    <img alt="" border="0" src="https://www.paypal.com/fr_FR/i/scr/pixel.gif" width="1" height="1" />
-    </form>
+    <article>
+      <div class="sousArticle">
+        <p>Cartographie reprenant les produits consignés que vous nous avez communiqué via le formulaire ci-dessous. Cette carte est enrichie au fur et à mesure que les réponses nous parviennent. Merci à vous !</p>
+        <iframe id="cartePoints" src="https://www.google.com/maps/d/embed?mid=1JTCHzdf6wfmZNGgoP9sYmGgFzMy48SMe" width="640" height="480"></iframe>
+      </div>
+    </article>
+    <?php require 'footer.php' ?>
   </body>
 </html>

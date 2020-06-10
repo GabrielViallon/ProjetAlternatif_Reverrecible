@@ -99,5 +99,6 @@
         <img src="../Vues/Style/CARTE.png" alt="carte">
       </div>
     </article>
+    <?php require 'footer.php' ?>
   </body>
 </html>

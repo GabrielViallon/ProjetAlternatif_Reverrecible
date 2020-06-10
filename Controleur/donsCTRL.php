@@ -1,3 +1,3 @@
 <?php
-require '../Vues/dons.html';
+require '../Vues/dons.php';
  ?>

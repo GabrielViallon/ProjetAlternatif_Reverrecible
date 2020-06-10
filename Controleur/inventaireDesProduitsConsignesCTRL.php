@@ -1,3 +1,3 @@
 <?php
-require '../Vues/inventaireDesProduitsConsignes.html';
+require '../Vues/inventaireDesProduitsConsignes.php';
  ?>

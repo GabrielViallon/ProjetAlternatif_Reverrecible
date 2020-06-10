@@ -1,3 +1,3 @@
 <?php
-require '../Vues/quisommesnous.html';
+require '../Vues/quisommesnous.php';
  ?>

@@ -1,3 +1,3 @@
 <?php
-require '../Vues/main.html';
+require '../Vues/main.php';
  ?>
