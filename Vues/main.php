@@ -32,7 +32,7 @@
     <article>
       <div class="sousArticle">
       <h2>LA CONSIGNE DU RÉEMPLOI DU VERRE.<br>
-      VOTRE AVIS NOUS INTÉRESSES!</h2>
+      VOTRE AVIS NOUS INTÉRESSE!</h2>
     </div>
     <div class="sousArticle">
       <a class="bouton" href="#"><h3>ACCEDEZ AU QUESTIONNAIRE</h3></a>

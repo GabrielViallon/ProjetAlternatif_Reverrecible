@@ -30,6 +30,11 @@
     </header>
     <h1>FAIRE UN DON A REVERRECIBLE</h1>
     <div class="separateur"></div>
+    <article>
+      <div class="sousArticle">
+        <p>Soutenez de manière financière le projet Reverrecible via la plateforme sécurisée PayPal. Choisissez un paiement unique de la valeur de votre choix ou établissez un paiment mensuel.</p>
+      </div>
+    </article>
     <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
     <input type="hidden" name="cmd" value="_s-xclick" />
     <input type="hidden" name="hosted_button_id" value="DU3ZZ6ZZ9NYRJ" />

@@ -209,12 +209,12 @@ border-radius: 5px;
     font: 12px Georgia, "Times New Roman", Times, serif;
     color: #888;
     text-shadow: 1px 1px 1px #FFF;
-    border:1px solid #E4E4E4;
+    border:1px solid black;
 }
 
 form input[type="text"], form input[type="email"], form textarea{
-	border: 1px solid #DADADA;
-	color: #888;
+	border: 1px solid black;
+	color: black;
 	height: 30px;
 	margin-bottom: 16px;
 	margin-right: 6px;
@@ -237,7 +237,8 @@ form input[type=submit] {
    background-repeat: no-repeat;
    background-position: left;
    background-size: contain;
-   color: #134359;
+   color: black;
+   border: 1px solid black;
    padding: 20px 70px;
    background-color: white;
 }
