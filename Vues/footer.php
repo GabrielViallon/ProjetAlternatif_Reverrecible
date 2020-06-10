@@ -9,7 +9,7 @@
       <h2>Contact</h2>
       <a href="mailto:info@reverrecible.fr">info@reverrecible.fr</a>
       <h2>Suivez-nous</h2>
-      <a href="https://www.facebook.com/reverrecible">Facebook</a>
+      <a href="https://www.facebook.com/reverrecible" target="_blank">Facebook</a>
     </div>
     <div class="footer-section soutiens">
       <h2>Soutenu par</h2>
