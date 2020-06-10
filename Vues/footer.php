@@ -21,7 +21,7 @@
     </div>
     <div class="footer-section membre">
       <h2>Membre du</h2>
-      <img class="logo-reseau" src="../Vues/Style/LOGOS_RESEAU-CONSIGNE" alt="Réseau consigne">
+        <a href="http://www.reseauconsigne.com/" target="_blank"><img class="logo-reseau" src="../Vues/Style/LOGOS_RESEAU-CONSIGNE" alt="Réseau consigne"></a>
     </div>
   </div>
 
