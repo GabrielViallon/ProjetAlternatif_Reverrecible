@@ -2,6 +2,7 @@
 <html lang="fr" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
     <link rel="stylesheet" href="../Vues/Style/main.css">
     <title>Reverrecible - Home</title>
   </head>
@@ -25,13 +26,13 @@
     </nav>
     </header>
     <div class="page-wrapper">
-    <div>
+    <div class="wow fadeIn">
       <img id="imgBackground" src="../Vues/Style/BackgroundModified.png" alt="image background">
     </div>
     <div class="separateur"></div>
     <article>
       <div class="sousArticle">
-      <h2>LA CONSIGNE DU RÉEMPLOI DU VERRE.<br>
+      <h2 class="wow zoomIn">LA CONSIGNE DU RÉEMPLOI DU VERRE.<br>
       VOTRE AVIS NOUS INTÉRESSE!</h2>
     </div>
     <div class="sousArticle">
@@ -42,15 +43,15 @@
     <article>
       <h2>POURQUOI REEMPLOYER NOS CONTENANTS EN VERRE ?</h2>
       <div class="sousArticle">
-        <img src="../Vues/Style/ENVIRONNEMENT.png" alt="environnement">
+        <img class="wow bounce imgMain" src="../Vues/Style/ENVIRONNEMENT.png" alt="environnement">
         <h4>Pour réduire notre impact environnemental</h4>
       </div>
       <div class="sousArticle">
-        <img src="../Vues/Style/ACTEURS_ECONOMIQUE.png" alt="acteurs economiques">
+        <img class="wow bounce imgMain" src="../Vues/Style/ACTEURS_ECONOMIQUE.png" alt="acteurs economiques">
         <h4>Pour favoriser les acteurs économiques du territoire</h4>
       </div>
       <div class="sousArticle">
-        <img src="../Vues/Style/ECONOMIES.png" alt="economies">
+        <img class="wow bounce imgMain" src="../Vues/Style/ECONOMIES.png" alt="economies">
         <h4>Pour faire des économies</h4>
       </div>
       <div class="sousArticle">
@@ -82,5 +83,9 @@
     </article>
     </div>
     <?php require 'footer.php' ?>
+    <script type="text/javascript" src="../js/wow.min.js"></script>
+    <script>
+      new WOW().init();
+    </script>
   </body>
 </html>
