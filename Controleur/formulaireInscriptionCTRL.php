@@ -1,4 +1,8 @@
 <?php
+// Utilisation de la DAO
+require_once('../Modele/DAO.class.php');
+$dao = new DAO;
+
 if (isset($_POST["email"])) {
   $emailF = $_POST['email'];
   $nomF = $_POST['nom'];
@@ -6,11 +10,10 @@ if (isset($_POST["email"])) {
   $mdpF = $_POST['mdp'];
 }
 
-require '../Modele/reverrecibleModeleBD.php';
-require '../Vues/formulaireInscription.php';
+require_once('../Vues/formulaireInscription.php');
 
-if (isset($_POST["email"]) && !userExists($emailF)) {
-  addUser($nomF, $prenomF, $emailF, $mdpF);
+if (isset($_POST["email"]) && $dao.getUser($emailF) == null) {
+  $dao.addUser($nomF, $prenomF, $emailF, $mdpF);
 } else {
   //echo 'Le mot de passe a déjà été utilisé !';
 }
