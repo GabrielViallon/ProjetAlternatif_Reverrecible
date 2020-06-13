@@ -5,7 +5,7 @@
   class DAO {
 
     private $db;
-    private $database = '../Modele/data/db/boxe.db';
+    private $database = '../Modele/data/db/reverrecible.db';
 
     public function __construct() {
       global $test;
