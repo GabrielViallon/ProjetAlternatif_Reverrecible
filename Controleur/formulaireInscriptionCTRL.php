@@ -15,7 +15,7 @@ require_once('../Vues/formulaireInscription.php');
 if (isset($_POST["email"]) && $dao.getUser($emailF) == null) {
   $dao.addUser($nomF, $prenomF, $emailF, $mdpF);
 } else {
-  //echo 'Le mot de passe a déjà été utilisé !';
+  //echo 'Le mail a déjà été utilisé !';
 }
 
  ?>
