@@ -25,9 +25,7 @@
         die("PDO Error :".$e->getMessage()." '".$this->database."'\n");
       }
     }
-    /////////////////////////////////////////////////////////////////////////////
-    //////////////////  USER ////////////////////////////////////////////////////
-    /////////////////////////////////////////////////////////////////////////////
+
     public function getAllUsers(){
       $query = "SELECT * FROM user ORDER BY nom";
       $sql= $this->db->query($query);
@@ -46,7 +44,10 @@
 
       if (count($utilisateur)==0) {
         return null;
-      }else {return new User($utilisateur);}
+      }
+      else {
+        return new User($utilisateur);
+      }
     }
     //----------------------------------------------------------------------------
     public function addUser(user $user){

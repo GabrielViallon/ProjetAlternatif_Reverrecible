@@ -10,7 +10,6 @@ if (isset($_POST["email"])) {
   $mdpF = $_POST['mdp'];
 }
 
-require_once('../Vues/formulaireInscription.php');
 
 if (isset($_POST["email"]) && $dao.getUser($emailF) == null) {
   $dao.addUser($nomF, $prenomF, $emailF, $mdpF);
@@ -18,4 +17,5 @@ if (isset($_POST["email"]) && $dao.getUser($emailF) == null) {
   //echo 'Le mail a déjà été utilisé !';
 }
 
+require_once('../Vues/formulaireInscription.php');
  ?>
