@@ -26,7 +26,8 @@ if (isset($_POST['email'])
 
   if($user==null) {
     $param = array("email"=>$email,"nom"=>$nom,"prenom"=>$prenom,"mdp"=>$mdp);
-    $dao->addUser(new User($param));
+    $user = new User($param);
+    $dao->addUser($user);
 
     session_start();
     $_SESSION['mail'] = $user->getEMail();
