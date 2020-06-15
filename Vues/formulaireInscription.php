@@ -45,9 +45,11 @@
             <br>
             <input type="password" name="mdp" size="40"  required placeholder="Mot de Passe" >
             <input type="submit" class="bouton" value="S'INSCRIRE">
+            <?php global $erreur; ?>
+            <!-- <br>
+            <br> -->
+            <p style='color:red'> <?=$erreur ?></p>
           </form>
-          <!-- <?php     global $confirmation; ?> -->
-          <!-- <p style='color:green'> <?= $confirmation ?></p> -->
         </fieldset>
     </div>
     </article>
