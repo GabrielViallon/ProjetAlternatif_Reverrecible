@@ -11,8 +11,9 @@ if (isset($_POST["email"])) {
 }
 
 
-if (isset($_POST["email"]) && $dao.getUser($emailF) == null) {
-  $dao.addUser($nomF, $prenomF, $emailF, $mdpF);
+if (isset($_POST["email"]) && $dao->getUser($emailF) == null) {
+  $param = array("email"=>$emailF,"nom"=>$nomF,"prenom"=>$prenomF,"mdp"=>$mdpF);
+  $dao->addUser(new User($param));
 } else {
   //echo 'Le mail a déjà été utilisé !';
 }

@@ -38,11 +38,13 @@
     }
     //----------------------------------------------------------------------------
     public function getUser($email){
-      $query = "SELECT * FROM user WHERE email='$email'";
+      $query = "SELECT * FROM user WHERE mail='$email'";
       $sql= $this->db->query($query);
-      $utilisateur = $sql->fetchAll(PDO::FETCH_ASSOC)[0];
+      if(isset($sql->fetchAll(PDO::FETCH_ASSOC)[0])){
+        $utilisateur = $sql->fetchAll(PDO::FETCH_ASSOC)[0];
+      }
 
-      if (count($utilisateur)==0) {
+      if (!isset($utilisateur)) {
         return null;
       }
       else {
@@ -59,7 +61,7 @@
       $query = "INSERT INTO user VALUES ('$nom','$prenom','$email','$mdp')";
       $insertUser=$this->db->query($query);
 
-      return $insertAdherent;
+      return $insertUser;
 
     }
   }
