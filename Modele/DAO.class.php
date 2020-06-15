@@ -56,7 +56,7 @@
       $email = $user->getEMail();
       $mdp = $user->getMDP();
 
-      $query = "INSERT INTO user VALUES ('$nom','$prenom','$email','$mdp')";
+      $query = "INSERT INTO user VALUES ('$email','$nom','$prenom','$mdp')";
       $insertUser=$this->db->query($query);
 
       return $insertUser;
