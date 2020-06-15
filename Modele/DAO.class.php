@@ -40,11 +40,9 @@
     public function getUser($email){
       $query = "SELECT * FROM user WHERE mail='$email'";
       $sql= $this->db->query($query);
-      if(isset($sql->fetchAll(PDO::FETCH_ASSOC)[0])){
-        $utilisateur = $sql->fetchAll(PDO::FETCH_ASSOC)[0];
-      }
+      $utilisateur = $sql->fetchAll(PDO::FETCH_ASSOC)[0];
 
-      if (!isset($utilisateur)) {
+      if (count($utilisateur)==0) {
         return null;
       }
       else {
