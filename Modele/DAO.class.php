@@ -40,17 +40,16 @@
     public function getUser($email){
       $query = "SELECT * FROM user WHERE mail='$email'";
       $sql= $this->db->query($query);
-      if(sizeof($sql->fetchAll(PDO::FETCH_ASSOC)) != 0) {
-        $utilisateur = $sql->fetchAll(PDO::FETCH_ASSOC)[0];
-      }
-      else {
-        $utilisateur = null;
-      }
-      if ($utilisateur==null) {
-        return null;
-      }
-      else {
-        return new User($utilisateur);
+      $req = $sql->fetchAll(PDO::FETCH_ASSOC);
+      if($req != null) {
+        if(sizeof($req != 0)) {
+          $utilisateur = $req[0];
+          return new User($utilisateur);
+        }
+        else {
+          $utilisateur = null;
+          return null;
+        }
       }
     }
     //----------------------------------------------------------------------------
