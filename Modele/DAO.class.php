@@ -42,7 +42,7 @@
       $sql= $this->db->query($query);
       $utilisateur = $sql->fetchAll(PDO::FETCH_ASSOC)[0];
 
-      if (count($utilisateur)==0) {
+      if ($utilisateur==null) {
         return null;
       }
       else {
