@@ -42,7 +42,7 @@ if (isset($_POST['email'])
         //   $adh = $dao->getAdherent($email);
         // }
         session_start();
-        $_SESSION['mail'] = $user->getMDP();
+        $_SESSION['mail'] = $user->getEMail();
         $_SESSION['prenom'] = $user->getPrenom();
         // Affichage du profil
         header('Location: profilCTRL.php?');

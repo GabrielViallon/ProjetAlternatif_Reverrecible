@@ -27,6 +27,11 @@ if (isset($_POST['email'])
   if($user==null) {
     $param = array("email"=>$email,"nom"=>$nom,"prenom"=>$prenom,"mdp"=>$mdp);
     $dao->addUser(new User($param));
+
+    session_start();
+    $_SESSION['mail'] = $user->getEMail();
+    $_SESSION['prenom'] = $user->getPrenom();
+    header('Location: profilCTRL.php?');
   } else {
     header('Location: formulaireInscriptionCTRL.php?erreur=1');
   }
