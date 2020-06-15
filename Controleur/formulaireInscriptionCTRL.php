@@ -3,19 +3,35 @@
 require_once('../Modele/DAO.class.php');
 $dao = new DAO;
 
-if (isset($_POST["email"])) {
-  $emailF = $_POST['email'];
-  $nomF = $_POST['nom'];
-  $prenomF = $_POST['prenom'];
-  $mdpF = $_POST['mdp'];
+if (isset($_GET['erreur'])) {
+  if ($_GET['erreur']==1) {
+    $erreur = "Le mail que vous avez entré est déjà utilisé";
+  }
+}
+else {
+  $erreur="";
+}
 
-  if($dao->getUser($emailF) == null) {
-    $param = array("email"=>$emailF,"nom"=>$nomF,"prenom"=>$prenomF,"mdp"=>$mdpF);
+if (isset($_POST['email'])
+  && isset($_POST['nom'])
+  && isset($_POST['prenom'])
+  && isset($_POST['mdp'])) {
+
+  $email = $_POST['email'];
+  $nom = $_POST['nom'];
+  $prenom = $_POST['prenom'];
+  $mdp = $_POST['mdp'];
+
+  $user = $dao->getUser($email);
+
+  if($user==null) {
+    $param = array("email"=>$email,"nom"=>$nom,"prenom"=>$prenom,"mdp"=>$mdp);
     $dao->addUser(new User($param));
   } else {
     //echo 'Le mail a déjà été utilisé !';
   }
+} else {
+  include('../Vues/formulaireInscription.php');
 }
 
-require_once('../Vues/formulaireInscription.php');
  ?>
