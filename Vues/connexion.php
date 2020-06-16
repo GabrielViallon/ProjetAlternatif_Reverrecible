@@ -24,39 +24,26 @@
         </li>
       </ul>
     </nav>
-    <!-- <div>
-      <img src="Style/HEADER_LANDSCAPE_Contact.jpg" alt="" align="center">
-    </div> -->
     <div class="separateurTop"></div>
     </header>
     <h1>Se connecter</h1>
     <div class="separateur"></div>
 
-    <article>
-    <div id="divco">
-      <img src="../view/src/img/connexion_logo.png" alt="">
-      <h1>Connexion</h1>
-      <form class="connexion" action="../Controleur/connexionCTRL.php" method="post">
-        <fieldset>
-          <p>
-            <!-- <label for="mail"><h2>Adresse mail</h2></label> -->
-            <input type="email" placeholder="Adresse mail" name="email" id="email" required/>
-          </p>
-          <p>
-            <!-- <label for="mdp"><h2>Mot de passe </h2></label> -->
-            <input type="password" placeholder="Mot de passe" name="mdp" id="mdp" required/>
-          </p>
-          <input type="submit" id="submit" value="Connexion">
-          <!-- <p><a id="inscription" href="../controle/motDePasseOublie.ctrl.php">Mot de passe oublié ?</a></p> -->
-          <br>
-          <?php global $erreur; ?>
-          <!-- <br>
-          <br> -->
-          <p style='color:red'> <?=$erreur ?></p>
-        </fieldset>
+    <article class="sousArticle">
+      <img style="width:70px;" src="../Vues/Style/connexion_logo.png" alt="">
+      <h2>Connexion</h2>
+      <fieldset>
+      <form action="../Controleur/connexionCTRL.php" method="post">
+        <input type="email" placeholder="Adresse mail" name="email" id="email" required/>
+        <br>
+        <input type="password" placeholder="Mot de passe" name="mdp" id="mdp" required/>
+        <input type="submit" class="bouton" value="CONNEXION">
+        <br>
+        <?php global $erreur; ?>
+        <p style='color:red'> <?=$erreur ?></p>
       </form>
+    </fieldset>
       <p>Vous n'avez pas encore de compte ? <a style="color:#0099cc;" href="../Controleur/formulaireInscriptionCTRL.php">S'inscrire</a> </p>
-    </div>
   </article>
     <?php require_once('footer.php'); ?>
   </body>

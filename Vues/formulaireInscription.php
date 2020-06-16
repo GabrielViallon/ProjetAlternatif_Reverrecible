@@ -32,12 +32,12 @@
     <h1>S'inscrire en tant qu'utilisateur</h1>
     <div class="separateur"></div>
 
-    <article>
-      <div class="sousArticle">
-        <h2>Vos informations</h2>
+    <article class="sousArticle">
+        <img style="width:70px;" src="../Vues/Style/inscription_logo.png" alt="">
+        <h2>Inscription</h2>
           <fieldset>
 
-          <form action="formulaireInscriptionCTRL.php" method="post" class="formulaire-inscription">
+          <form action="formulaireInscriptionCTRL.php" method="post">
             <input type="email" name="email" size="40" required placeholder="E-mail" >
             <br>
             <input type="text" name="nom"  size="40" required  placeholder="Nom" >
@@ -45,14 +45,15 @@
             <input type="text" name="prenom"  size="40" required  placeholder="Prénom" >
             <br>
             <input type="password" name="mdp" size="40"  required placeholder="Mot de Passe" >
-            <input type="submit" class="bouton" value="S'INSCRIRE">
+
+              <input type="submit" class="bouton" value="INSCRIPTION">
+
+            <br>
             <?php global $erreur; ?>
-            <!-- <br>
-            <br> -->
             <p style='color:red'> <?=$erreur ?></p>
           </form>
         </fieldset>
-    </div>
+        <p>Vous avez déjà un compte ? <a style="color:#0099cc;" href="../Controleur/connexionCTRL.php">Se connecter</a> </p>
     </article>
     <?php require_once('footer.php'); ?>
   </body>

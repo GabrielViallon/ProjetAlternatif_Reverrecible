@@ -61,7 +61,9 @@
 
         </div>
         <?php } else { ?>
-          <p> <a style="color:#0099cc;" href="../Controleur/connexionCTRL.php">Connectez-vous</a> ou <a style="color:#0099cc;" href="../Controleur/formulaireInscriptionCTRL.php">inscrivez vous</a> pour acceder au profil.</p>
+          <article class="sousArticle">
+            <p> <a style="color:#0099cc;" href="../Controleur/connexionCTRL.php">Connectez-vous</a> ou <a style="color:#0099cc;" href="../Controleur/formulaireInscriptionCTRL.php">inscrivez vous</a> pour acceder au profil.</p>
+          </article> 
         <?php } ?>
 
     <?php require_once('footer.php'); ?>

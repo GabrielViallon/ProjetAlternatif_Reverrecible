@@ -49,7 +49,7 @@
             <br>
             <br>
             <textarea name="description" required placeholder="Description de l'événement" ></textarea>
-            <input type="submit" class="bouton" value="Créer l'événement">
+            <input type="submit" class="bouton" value="CREER">
           </form>
         </fieldset>
     </div>
@@ -61,27 +61,24 @@
       if(!empty($evenements)){
 
       foreach ($evenements as $evenement) { ?>
-                <article>
-
-                <div class="sousArticle fondGris">
-                  <!-- titre de l'informations avec date -->
-                  <?php
-                  $date = $evenement->getDate();
-                   ?>
-
-                  <!-- <img style="max-width: 35px; margin-right: 10px;" src="../Vues/Style/icons8-bell-24.png" alt="un evenement"> -->
-                  <h2 style="margin:10px;"><?=$evenement->getNom()?></h2>
-                  <h3 style="margin:10px;"><?=$date?></h3>
-                  <!-- contenu -->
-                  <p>
-                  <?=$evenement->getDescription()?>
-                  </p>
-                  <!-- nom de celui qui donne l'info -->
-                  <p>Informations données par <b><i><?=$evenement->getGerant()?></i></b></p>
-                </div>
+        <?php
+          $date = $evenement->getDate();
+          $nom = $evenement->getNom();
+        ?>
+        <article>
+          <div class="sousArticle fondGris">
+            <h1><?=$date?> - <?=$nom?></h1>
+            <p style="margin-left: 50px; font-size:85%;">par <b><i><?=$evenement->getGerant()?></i></b></p>
+            <article>
+              <p>
+                <?=$evenement->getDescription()?>
+              </p>
+            </article>
+          </div>
 
                 <?php if (isset($_SESSION['gerant']) && $_SESSION['gerant'] == 1) { ?>
-                    <a class="bouton" style="background-color: red; float: right; width: 100px;" href="supprimerEvenementCTRL.php?date=<?=$date?>&nom=<?=$evenement->getNom()?>"><h3 style="color:white;">supprimer</h3></a>
+                    <a class="bouton" style="background-color: red; float: right;" href="supprimerEvenementCTRL.php?date=<?=$date?>&nom=<?=$nom?>">
+                      <img style="max-width:32px; max-height:32px;" src="../Vues/Style/icons8-supprimer-32.png" alt="supprimer"></a>
                 <?php } ?>
 
                 </article>
@@ -90,6 +87,6 @@
               else {
                 echo'<article class="sousArticle"><p style="color : red">' . " aucun événement de prévu pour l'instant !</p></article>";
               }?>
-          <?php require_once('footer.php'); ?>
-  </body>
+            </body>
+            <?php require_once('footer.php'); ?>
 </html>
