@@ -17,7 +17,7 @@ if (isset($_POST['nomLieu'])
       $param = array("nomLieu"=>$nomLieu,"adresse"=>$adresse,"type"=>$type,"description"=>$description,"email"=>$email);
       $demande = new DemandePoint($param);
       $dao->addDemandePoint($demande);
-      header('Location: inventaireDesProduitsConsignesCTRL.php?izfioah');
+      header('Location: inventaireDesProduitsConsignesCTRL.php');
     }
   }
 
