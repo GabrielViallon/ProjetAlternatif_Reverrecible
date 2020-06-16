@@ -22,7 +22,7 @@ if (isset($_POST['email'])
   $prenom = $_POST['prenom'];
   $mdp = $_POST['mdp'];
   $gerant = 0;
-  $dateinscription = date("y-m-d");
+  $dateinscription = date("Y-m-d");
 
   $user = $dao->getUser($email);
 
