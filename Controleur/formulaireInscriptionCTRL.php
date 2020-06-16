@@ -22,7 +22,7 @@ if (isset($_POST['email'])
   $prenom = $_POST['prenom'];
   $mdp = $_POST['mdp'];
   $gerant = 0;
-  $dateinscription = date("m/d/y");
+  $dateinscription = date("y-m-d");
 
   $user = $dao->getUser($email);
 
@@ -35,6 +35,7 @@ if (isset($_POST['email'])
     $_SESSION['mail'] = $user->getEMail();
     $_SESSION['prenom'] = $user->getPrenom();
     $_SESSION['nom'] = $user->getNom();
+    $_SESSION['gerant'] = $user->getGerant();
     header('Location: profilCTRL.php?');
   } else {
     header('Location: formulaireInscriptionCTRL.php?erreur=1');
