@@ -32,26 +32,26 @@
     <div class="separateur"></div>
 
       <?php foreach ($evenements as $evenement) { ?>
-              <article>
+                <article>
+
                 <div class="sousArticle">
                   <!-- titre de l'informations avec date -->
                   <?php
                   $date = $evenement->getDate();
                    ?>
 
-                  <h4><?=$evenement->getNom()?> - <?=$date?></h4>
-                  <hr>
-                    <img src="../Vues/Style/icons8-bell-24.png" alt="un evenement">
+                  <article> <img style="max-width: 35px; margin-right: 10px;" src="../Vues/Style/icons8-bell-24.png" alt="un evenement">  <h2 style="margin:10px;"><?=$evenement->getNom()?></h2> - <h3 style="margin:10px;"><?=$date?></h3></article>
                   <?php } ?>
-                </div>
-                <div class="sousArticle">
                   <!-- contenu -->
+                  <div class="separateurP"></div>
+                  <p>
                   <?=$evenement->getDescription()?>
+                  </p>
+                  <div class="separateurP"></div>
                   <!-- nom de celui qui donne l'info -->
                   <p>Informations données par <?=$evenement->getGerant()?></p>
                 </div>
-              </article>
-            <br>
+                </article>
           <?php require 'footer.php' ?>
   </body>
 </html>
