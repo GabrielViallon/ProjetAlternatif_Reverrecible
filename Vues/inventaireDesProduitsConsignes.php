@@ -70,7 +70,7 @@
                   <td><?=$adresse?></td>
                   <td><?=$type?></td>
                   <td><?=$email?></td>
-                  <td><a href="supprimerDemandeCTRL?<?=$adresse?>">Supprimer</a></td>
+                  <td><a style="color : red" href="supprimerDemandeCTRL.php?demande=<?=$adresse?>">Supprimer</a></td>
                   <?php } ?>
         </tr>
       <?php } else { ?>

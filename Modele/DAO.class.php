@@ -121,5 +121,10 @@
       }
       return $listeDemandes;
     }
+
+    public function suppDemandePoint($adresse){
+      $suppDemandePoint = "DELETE FROM demandePoint WHERE adresse='$adresse'";
+      return $this->db->query($suppDemandePoint);
+    }
   }
   ?>
