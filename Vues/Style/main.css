@@ -117,7 +117,7 @@ nav li a:hover, .dropdown:hover .dropbtn{
 }
 
 .dropdown-content {
-  margin-top: 320px;
+  margin-top: 285px;
   display: none;
   position: absolute;
   min-width: 160px;
