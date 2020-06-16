@@ -16,6 +16,7 @@
         <li class="dropdown">
           <a href="javascript:void(0)" class="dropbtn"><h3>AUTRES</h3></a>
           <div class="dropdown-content">
+            <a href="profilCTRL.php">PROFIL</a>
             <a href="donsCTRL.php">DONS</a>
             <a href="inventaireDesProduitsConsignesCTRL.php">INVENTAIRE DES PRODUITS CONSIGNÉS</a>
             <a href="evenementsCTRL.php">DÉFI RAMÈNE TA BOUTEILLE !</a>
@@ -31,7 +32,10 @@
     <h1>EVENEMENTS</h1>
     <div class="separateur"></div>
 
-      <?php foreach ($evenements as $evenement) { ?>
+      <?php
+      if(!empty($evenements)){
+
+      foreach ($evenements as $evenement) { ?>
                 <article>
 
                 <div class="sousArticle">
@@ -41,7 +45,6 @@
                    ?>
 
                   <article> <img style="max-width: 35px; margin-right: 10px;" src="../Vues/Style/icons8-bell-24.png" alt="un evenement">  <h2 style="margin:10px;"><?=$evenement->getNom()?></h2> - <h3 style="margin:10px;"><?=$date?></h3></article>
-                  <?php } ?>
                   <!-- contenu -->
                   <div class="separateurP"></div>
                   <p>
@@ -52,6 +55,10 @@
                   <p>Informations données par <?=$evenement->getGerant()?></p>
                 </div>
                 </article>
+              <?php } }
+              else {
+                echo"aucun evenement de prévu pour l'instant";
+              }?>
           <?php require 'footer.php' ?>
   </body>
 </html>
