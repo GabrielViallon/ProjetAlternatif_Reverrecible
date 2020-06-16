@@ -27,7 +27,7 @@ if (isset($_POST['email'])
   $user = $dao->getUser($email);
 
   if($user==null) {
-    $param = array("email"=>$email,"nom"=>$nom,"prenom"=>$prenom,"mdp"=>$mdp, "gerant"=>$gerant, "dateInscription"=>$dateinscription);
+    $param = array("mail"=>$email,"nom"=>$nom,"prenom"=>$prenom,"mdp"=>$mdp, "gerant"=>$gerant, "dateinscription"=>$dateinscription);
     $user = new User($param);
     $dao->addUser($user);
 

@@ -70,6 +70,11 @@
 
     }
     //----------------------------------------------------------------------------
+    public function suppUtilisateur($utilisateur){
+      $suppUtilisateur = "DELETE FROM user WHERE mail='$utilisateur'";
+      return $this->db->query($suppUtilisateur);
+    }
+    //----------------------------------------------------------------------------
     public function getEvenements(){
       $query = "SELECT * FROM evenement ORDER BY dateEv";
       $sql= $this->db->query($query);

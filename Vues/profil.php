@@ -54,6 +54,7 @@
               <li> <div class="separateurP"></div> </li>
             <li><a href="evenementsCTRL.php"><h3>EVENEMENTS</h3></a></li>
             <li><a href="inventaireDesProduitsConsignesCTRL.php"><h3>DEMANDES DE POINTS</h3></a></li>
+            <li><a href="utilisateursCTRL.php"><h3>UTILISATEURS</h3></a></li>
             <li><a href="deconnexionCTRL.php"><h3>DECONNEXION</h3></a></li>
           </ul>
 

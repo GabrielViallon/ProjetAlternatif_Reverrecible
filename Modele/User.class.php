@@ -4,7 +4,7 @@
     //////////////////////declaration des attributs///////////////////
     protected $nom;
     protected $prenom;
-    protected $email;
+    protected $mail;
     protected $mdp;
     protected $gerant;
     protected $dateinscription;
@@ -19,9 +19,9 @@
     //////////////////declaration des getter//////////////////////
     public function getNom() {return $this->nom;}
     public function getPrenom() {return $this->prenom;}
-    public function getEMail() {return $this->email;}
+    public function getEMail() {return $this->mail;}
     public function getMDP() {return $this->mdp;}
     public function getGerant() {return $this->gerant;}
-    public function getDateInscription() {return $this->dateInscription;}
+    public function getDateInscription() {return $this->dateinscription;}
   }
   ?>
