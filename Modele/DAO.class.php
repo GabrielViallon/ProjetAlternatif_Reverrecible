@@ -153,6 +153,11 @@
 
       return $insertEvenement;
     }
+    //----------------------------------------------------------------------------
+    public function suppEvenement($dateEv, $nom){
+      $suppEvenement = "DELETE FROM evenement WHERE nom='$nom' AND dateEv='$dateEv'";
+      return $this->db->query($suppEvenement);
+    }
 
   }
   ?>

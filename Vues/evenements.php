@@ -66,14 +66,21 @@
                   $date = $evenement->getDate();
                    ?>
 
-                  <article> <img style="max-width: 35px; margin-right: 10px;" src="../Vues/Style/icons8-bell-24.png" alt="un evenement">  <h2 style="margin:10px;"><?=$evenement->getNom()?></h2> - <h3 style="margin:10px;"><?=$date?></h3></article>
+                  <!-- <img style="max-width: 35px; margin-right: 10px;" src="../Vues/Style/icons8-bell-24.png" alt="un evenement"> -->
+                  <h2 style="margin:10px;"><?=$evenement->getNom()?></h2>
+                  <h3 style="margin:10px;"><?=$date?></h3>
                   <!-- contenu -->
-                  <p>
+                  <p class="fondGris">
                   <?=$evenement->getDescription()?>
                   </p>
                   <!-- nom de celui qui donne l'info -->
-                  <p>Informations données par <?=$evenement->getGerant()?></p>
+                  <p>Informations données par <b><i><?=$evenement->getGerant()?></i></b></p>
                 </div>
+
+                <?php if (isset($_SESSION['gerant']) && $_SESSION['gerant'] == 1) { ?>
+                    <a class="bouton" style="background-color: red; float: right; width: 100px;" href="supprimerEvenementCTRL.php?date=<?=$date?>&nom=<?=$evenement->getNom()?>"><h3 style="color:white;">supprimer</h3></a>
+                <?php } ?>
+
                 </article>
                 <div class="separateur"></div>
               <?php } }
