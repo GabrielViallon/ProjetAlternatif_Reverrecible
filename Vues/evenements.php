@@ -60,7 +60,7 @@
       foreach ($evenements as $evenement) { ?>
                 <article>
 
-                <div class="sousArticle">
+                <div class="sousArticle fondGris">
                   <!-- titre de l'informations avec date -->
                   <?php
                   $date = $evenement->getDate();
@@ -70,7 +70,7 @@
                   <h2 style="margin:10px;"><?=$evenement->getNom()?></h2>
                   <h3 style="margin:10px;"><?=$date?></h3>
                   <!-- contenu -->
-                  <p class="fondGris">
+                  <p>
                   <?=$evenement->getDescription()?>
                   </p>
                   <!-- nom de celui qui donne l'info -->
