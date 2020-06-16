@@ -3,6 +3,7 @@
 /////////////////declaration/////////////////////////////////////////////
 require_once('../Modele/DAO.class.php');
 $dao = new DAO;
+session_start();
 
 /////////////////////////////////////////////////////////////////////////
 
@@ -41,9 +42,10 @@ if (isset($_POST['email'])
         // } else {
         //   $adh = $dao->getAdherent($email);
         // }
-        session_start();
+
         $_SESSION['mail'] = $user->getEMail();
         $_SESSION['prenom'] = $user->getPrenom();
+        $_SESSION['nom'] = $user->getNom();
         // Affichage du profil
         header('Location: profilCTRL.php?');
       } else {

@@ -33,6 +33,15 @@
         <iframe id="cartePoints" src="https://www.google.com/maps/d/embed?mid=1JTCHzdf6wfmZNGgoP9sYmGgFzMy48SMe" width="640" height="480"></iframe>
       </div>
     </article>
+    <div class="separateur"></div>
+    <article class="sousArticle">
+      <?php if (isset($_SESSION['nom'])) {?>
+        <p>En tant que membre, vous pouvez dès à présent nous suggérer un point de collecte en remplissant le formulaire.</p>
+      <?php } else { ?>
+        <p>Connectez-vous afin d'accéder au formulaire pour nous renseigner un point de consigne.</p>
+        <a class="bouton" href="../Controleur/connexionCTRL.php"><h3>SE CONNECTER</h3></a>
+      <?php } ?>
+    </article>
     <?php require 'footer.php' ?>
   </body>
 </html>
