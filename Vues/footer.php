@@ -26,6 +26,6 @@
   </div>
 
     <div class="footer-bottom">
-      &copy; Copyright © Reverrecible  2020 - Tous droits réservés.
+      &copy; Copyright © Reverrecible  <?= date('Y'); ?> - Tous droits réservés.
     </div>
 </div>
