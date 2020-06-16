@@ -333,6 +333,7 @@ form input[type=submit] {
 table {
  border-collapse:collapse;
  width:90%;
+ margin-bottom: 100px;
  }
 th, td {
  border:1px solid black;
