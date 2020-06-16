@@ -60,7 +60,7 @@ if (isset($_POST['email'])
     }
 // Si formulaire non rempli afficher la vue inscription
 } else {
-  include('../Vues/connexion.php');
+   require_once('../Vues/connexion.php');
 }
 
  ?>

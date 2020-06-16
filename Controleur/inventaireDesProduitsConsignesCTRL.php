@@ -23,5 +23,5 @@ if (isset($_POST['nomLieu'])
     }
   }
 
-require '../Vues/inventaireDesProduitsConsignes.php';
- ?>
+require_once('../Vues/inventaireDesProduitsConsignes.php');
+?>

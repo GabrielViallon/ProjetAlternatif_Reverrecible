@@ -1,3 +1,3 @@
 <?php
-require '../Vues/consigne.php';
+require_once('../Vues/consigne.php');
  ?>

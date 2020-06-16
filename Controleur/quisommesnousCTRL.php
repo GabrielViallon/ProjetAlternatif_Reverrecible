@@ -1,3 +1,3 @@
 <?php
-require '../Vues/quisommesnous.php';
+require_once('../Vues/quisommesnous.php');
  ?>

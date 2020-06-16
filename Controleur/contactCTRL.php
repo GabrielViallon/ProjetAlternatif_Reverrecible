@@ -1,3 +1,3 @@
 <?php
-require '../Vues/contact.php';
+require_once('../Vues/contact.php');
  ?>

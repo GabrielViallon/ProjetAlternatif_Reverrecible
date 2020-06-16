@@ -32,8 +32,11 @@
     <h1>EVENEMENTS</h1>
     <div class="separateur"></div>
 
+
   <?php if (isset($_SESSION['gerant']) && $_SESSION['gerant'] == 1) { ?>
-    <p>En tant que gérant, vous pouvez créer des événements à venir pour en prévenir les utilisateurs</p>
+    <article class="sousArticle">
+      <p>En tant que gérant, vous pouvez créer des événements à venir pour en prévenir les utilisateurs</p>
+    </article>
 
     <article>
       <div class="sousArticle">
@@ -85,7 +88,7 @@
                 <div class="separateur"></div>
               <?php } }
               else {
-                echo"<article> aucun evenement de prévu pour l'instant </article>";
+                echo'<article class="sousArticle"><p style="color : red">' . " aucun événement de prévu pour l'instant !</p></article>";
               }?>
           <?php require 'footer.php' ?>
   </body>

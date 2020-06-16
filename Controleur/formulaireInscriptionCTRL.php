@@ -41,7 +41,7 @@ if (isset($_POST['email'])
     header('Location: formulaireInscriptionCTRL.php?erreur=1');
   }
 } else {
-  include('../Vues/formulaireInscription.php');
+  require_once('../Vues/formulaireInscription.php');
 }
 
  ?>

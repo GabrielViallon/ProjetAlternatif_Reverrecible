@@ -1,4 +1,4 @@
 <?php
 session_start();
-require '../Vues/profil.php';
+require_once('../Vues/profil.php');
  ?>

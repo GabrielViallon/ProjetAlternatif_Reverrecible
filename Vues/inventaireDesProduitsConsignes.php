@@ -91,8 +91,8 @@
         <p>Connectez-vous afin d'accéder au formulaire pour nous renseigner un point de consigne.</p>
         <a class="bouton" href="../Controleur/connexionCTRL.php"><h3>SE CONNECTER</h3></a>
       <?php } ?>
-      <table>
+    </table>
     </article>
-    <?php require 'footer.php' ?>
+    <?php require_once('footer.php'); ?>
   </body>
 </html>

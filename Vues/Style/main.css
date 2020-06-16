@@ -114,7 +114,6 @@ a {
 }
 
 nav li a:hover, .dropdown:hover .dropbtn, .profile li a:hover{
-  /* text-decoration: underline; */
   border-bottom: 5px solid white;
 }
 

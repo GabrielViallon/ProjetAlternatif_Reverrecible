@@ -60,6 +60,7 @@
                 <td><p>Impossible de supprimer un gérant.</p></td>
               <?php }}?>
       </tr>
+      </table>
     <?php require 'footer.php' ?>
   </body>
 </html>

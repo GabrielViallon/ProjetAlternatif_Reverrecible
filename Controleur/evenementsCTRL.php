@@ -1,6 +1,6 @@
 <?php
 
-include('../Modele/DAO.class.php');
+require_once('../Modele/DAO.class.php');
   $dao = new DAO;
   $evenements = $dao->getEvenements(); // recuperer les evenements de la BD pour les afficher
   session_start();
@@ -22,6 +22,6 @@ include('../Modele/DAO.class.php');
       }
     }
 
-  include('../Vues/evenements.php');
+  require_once('../Vues/evenements.php');
 
   ?>
