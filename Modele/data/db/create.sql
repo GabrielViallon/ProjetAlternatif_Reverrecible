@@ -14,3 +14,10 @@ CREATE TABLE evenement(
   gerant VARCHAR(25),
   PRIMARY KEY(nom,dateEv)
 );
+
+CREATE TABLE demandePoint(
+  nomLieu VARCHAR(25),
+  adresse VARCHAR(40) PRIMARY KEY,
+  type VARCHAR(30),
+  description TEXT
+);

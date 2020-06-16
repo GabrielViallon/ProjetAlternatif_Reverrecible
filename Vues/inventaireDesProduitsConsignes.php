@@ -36,7 +36,23 @@
     <div class="separateur"></div>
     <article class="sousArticle">
       <?php if (isset($_SESSION['nom'])) {?>
-        <p>En tant que membre, vous pouvez dès à présent nous suggérer un point de collecte en remplissant le formulaire.</p>
+        <p>En tant que membre, vous pouvez dès à présent nous suggérer un point de collecte en remplissant le formulaire suivant.</p>
+        <fieldset>
+
+        <form action="../controle/inventaireDesProduitsConsignesCTRL.php" method="post" class="formulaire-points-consigne">
+          <input type="text" name="nomLieu" size="40" required placeholder="Nom du lieu" >
+          <br>
+          <input type="text" name="adresse"  size="40" required  placeholder="Adresse du lieu" >
+          <br>
+          <input type="text" name="type" size="40"  required placeholder="Type de produit consigné" >
+          <br>
+          <textarea name="description" required placeholder="Description et détails complémentaires" ></textarea>
+          <br>
+          <input type="submit" class="bouton" value="ENVOYER">
+        </form>
+        <!-- <?php     global $confirmation; ?> -->
+        <!-- <p style='color:green'> <?= $confirmation ?></p> -->
+      </fieldset>
       <?php } else { ?>
         <p>Connectez-vous afin d'accéder au formulaire pour nous renseigner un point de consigne.</p>
         <a class="bouton" href="../Controleur/connexionCTRL.php"><h3>SE CONNECTER</h3></a>

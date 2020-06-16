@@ -2,6 +2,7 @@
   /////////////////////////DECLARATION DES CLASSES//////////////////////////////
   require_once('../Modele/User.class.php');
   require_once('../Modele/Evenement.class.php');
+  require_once('../Modele/DemandePoint.class.php');
   //////////////////////////////////////////////////////////////////////////////
   class DAO {
 
@@ -78,6 +79,35 @@
         array_push($listeEvenements,new Evenement($evenement));
       }
       return $listeEvenements;
+    }
+    //----------------------------------------------------------------------------
+    public function getDemandePoint($adresse){
+      $query = "SELECT * FROM demandePoint WHERE adresse='$adresse'";
+      $sql= $this->db->query($query);
+      $req = $sql->fetchAll(PDO::FETCH_ASSOC);
+      if($req != null) {
+        if(sizeof($req != 0)) {
+          $demande = $req[0];
+          return new DemandePoint($demande);
+        }
+        else {
+          $demande = null;
+          return null;
+        }
+      }
+    }
+    //----------------------------------------------------------------------------
+    public function addDemandePoint(demandePoint $demande){
+      $nomLieu = $demande->getNomLieu();
+      $adresse = $demande->getAdresse();
+      $type = $user->getType();
+      $description = $user->getDescription();
+
+      $query = "INSERT INTO demandePoint VALUES ('$nomLieu','$adresse','$type','$description')";
+      $insertDemande=$this->db->query($query);
+
+      return $insertDemande;
+
     }
   }
   ?>
