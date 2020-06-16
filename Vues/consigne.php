@@ -87,6 +87,6 @@
     <img src="../Vues/Style/SCHEMA_CO2.png" alt="">
   </div>
       </article>
-      <?php require 'footer.php' ?>
+      <?php require_once('footer.php'); ?>
   </body>
 </html>

@@ -1,5 +1,8 @@
-html, body {
+html{
   height: 100%;
+}
+body {
+  heigth:100vh;
   max-width: 1280px;
   padding: 0px;
   margin: auto;
@@ -254,7 +257,6 @@ form input[type=submit] {
   background: #303036;
   color: #d3d3d3;
   height: 400px;
-  position: relative;
 }
 
 .footer .footer-content {
@@ -280,11 +282,7 @@ form input[type=submit] {
   background: #343a40;
   color: #686868;
   height: 50px;
-  width: 100%;
   text-align: center;
-  position: absolute;
-  bottom: 0px;
-  left: 0px;
   padding-top: 20px;
 }
 
@@ -334,7 +332,8 @@ form input[type=submit] {
 table {
  border-collapse:collapse;
  width:90%;
- margin-bottom: 100px;
+ margin-bottom: 50px;
+ margin-top: 50px;
  }
 th, td {
  border:1px solid black;

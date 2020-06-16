@@ -30,6 +30,8 @@
     <div class="separateur"></div>
     <?php if ($users != null) {?>
     <h2>La base de donnée comprend actuellement <?= count($users) ?> utilisateurs.</h2>
+    <article class="sousArticle">
+
     <table>
     <tr>
       <th>Nom</th>
@@ -61,6 +63,7 @@
               <?php }}?>
       </tr>
       </table>
-    <?php require 'footer.php' ?>
+    </article>
+    <?php require_once('footer.php'); ?>
   </body>
 </html>

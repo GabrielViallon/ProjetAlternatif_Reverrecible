@@ -42,6 +42,6 @@
     <input type="image" src="https://www.paypalobjects.com/fr_FR/FR/i/btn/btn_donateCC_LG.gif" border="0" name="submit" title="Donner à Reverrecible via PayPal" alt="Bouton Faites un don avec PayPal" />
     <img alt="" border="0" src="https://www.paypal.com/fr_FR/i/scr/pixel.gif" width="1" height="1" />
     </form>
-    <?php require 'footer.php' ?>
+    <?php require_once('footer.php'); ?>
   </body>
 </html>

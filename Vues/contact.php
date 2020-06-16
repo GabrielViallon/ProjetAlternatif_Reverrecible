@@ -75,6 +75,6 @@
       </div>
     </div>
     </article>
-    <?php require 'footer.php' ?>
+    <?php require_once('footer.php'); ?>
   </body>
 </html>

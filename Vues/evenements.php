@@ -90,6 +90,6 @@
               else {
                 echo'<article class="sousArticle"><p style="color : red">' . " aucun événement de prévu pour l'instant !</p></article>";
               }?>
-          <?php require 'footer.php' ?>
+          <?php require_once('footer.php'); ?>
   </body>
 </html>

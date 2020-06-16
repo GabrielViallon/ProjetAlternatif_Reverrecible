@@ -58,6 +58,6 @@
       <p>Vous n'avez pas encore de compte ? <a style="color:#0099cc;" href="../Controleur/formulaireInscriptionCTRL.php">S'inscrire</a> </p>
     </div>
   </article>
-    <?php require 'footer.php' ?>
+    <?php require_once('footer.php'); ?>
   </body>
 </html>

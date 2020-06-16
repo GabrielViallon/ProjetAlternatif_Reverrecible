@@ -3,7 +3,7 @@
     <div class="footer-section objectifs">
       <h2>Objectifs</h2>
       <p>Développer la filière du réemploi des contenants en verre consignés sur le territoire de Grenoble et alentours.</p>
-      <a class="bouton" href="donsCTRL.php"><h3>FAIRE UN DON</h3></a>
+      <a class="bouton" href="donsCTRL.php"><h3 style="color:white;">FAIRE UN DON</h3></a>
     </div>
     <div class="footer-section contact">
       <h2>Contact</h2>

@@ -44,6 +44,7 @@
           </div>
 
       <?php } else if (isset($_SESSION['gerant']) && $_SESSION['gerant'] == 1) { ?>
+        <h3>Vous êtes un(e) gérant(e) du site web</h3>
         <div class="profile">
 
           <ul>
@@ -59,16 +60,10 @@
           </ul>
 
         </div>
-        <article>
-          <div class="sousArticle">
-            <h2> <?= $_SESSION['prenom'] ?> <?= $_SESSION['nom'] ?> </h2>
-            <p>mail : <?= $_SESSION['mail'] ?> </p>
-          </div>
-        </article>
         <?php } else { ?>
           <p> <a style="color:#0099cc;" href="../Controleur/connexionCTRL.php">Connectez-vous</a> ou <a style="color:#0099cc;" href="../Controleur/formulaireInscriptionCTRL.php">inscrivez vous</a> pour acceder au profil.</p>
         <?php } ?>
 
-    <?php require 'footer.php' ?>
+    <?php require_once('footer.php'); ?>
   </body>
 </html>
