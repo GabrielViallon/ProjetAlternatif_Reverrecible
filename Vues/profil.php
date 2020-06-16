@@ -12,10 +12,11 @@
         <li id="logoMenu"><a href="mainCTRL.php"><img src="../Vues/Style/Logo.png" alt="logo"></a></li>
         <li><a href="quisommesnousCTRL.php"><h3>QUI SOMMES NOUS ?</h3></a></li>
         <li><a href="consigneCTRL.php"><h3>CONSIGNE</h3></a></li>
-        <li><a href="#"><h3>CONTACT</h3></a></li>
+        <li><a href="contactCTRL.php"><h3>CONTACT</h3></a></li>
         <li class="dropdown">
           <a href="javascript:void(0)" class="dropbtn"><h3>AUTRES</h3></a>
           <div class="dropdown-content">
+            <a href="profilCTRL.php">PROFIL</a>
             <a href="donsCTRL.php">DONS</a>
             <a href="inventaireDesProduitsConsignesCTRL.php">INVENTAIRE DES PRODUITS CONSIGNÉS</a>
             <a href="evenementsCTRL.php">EVENEMENTS</a>
@@ -27,9 +28,24 @@
     </header>
     <h1>VOTRE PROFIL</h1>
     <div class="separateur"></div>
-    <!-- <div>
-      <img src="Style/HEADER_LANDSCAPE_Contact.jpg" alt="" align="center">
-    </div> -->
+
+        <?php if (isset($_SESSION['nom']) && isset($_SESSION['gerant']) && $_SESSION['gerant'] == 0) {?>
+          <div class="profile">
+
+            <ul>
+              <li><img class="photo-profil" src="../Vues/Style/profilLogo.png">
+                <?php if (isset($_SESSION['prenom'])) {
+                $prenom = $_SESSION['prenom'];
+                echo '<h2 style="color:white;">' . $_SESSION['prenom'] . " " . $_SESSION['nom'] . '</h2>';}?></li>
+                <li> <div class="separateurP">
+                </div> </li>
+              <li><a href="#"><h3>INFORMATIONS DU COMPTE</h3></a></li>
+              <li><a href="deconnexionCTRL.php"><h3>DECONNEXION</h3></a></li>
+            </ul>
+
+          </div>
+
+      <?php } else if (isset($_SESSION['gerant']) && $_SESSION['gerant'] == 1) { ?>
         <div class="profile">
 
           <ul>
@@ -39,12 +55,17 @@
               echo '<h2 style="color:white;">' . $_SESSION['prenom'] . " " . $_SESSION['nom'] . '</h2>';}?></li>
               <li> <div class="separateurP">
               </div> </li>
-            <li><a href="evenementsCTRL.php"><h3>EVENEMENTS</h3></a></li>
-            <li><a href="evenementsCTRL.php"><h3>DEMANDES DE POINTS</h3></a></li>
-            <li><a href="evenementsCTRL.php"><h3>INFORMATIONS DU COMPTE</h3></a></li>
+            <li><a href="creationEvenementsCTRL.php"><h3>EVENEMENTS</h3></a></li>
+            <li><a href="inventaireDesProduitsConsignesCTRL.php"><h3>DEMANDES DE POINTS</h3></a></li>
+            <li><a href="#"><h3>INFORMATIONS DU COMPTE</h3></a></li>
+            <li><a href="deconnexionCTRL.php"><h3>DECONNEXION</h3></a></li>
           </ul>
 
         </div>
+        <?php } else { ?>
+          <p> <a style="color:#0099cc;" href="../Controleur/connexionCTRL.php">Connectez-vous</a> ou <a style="color:#0099cc;" href="../Controleur/formulaireInscriptionCTRL.php">inscrivez vous</a> pour acceder au profil.</p>
+        <?php } ?>
+
     <?php require 'footer.php' ?>
   </body>
 </html>

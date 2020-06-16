@@ -17,6 +17,7 @@
         <li class="dropdown">
           <a href="javascript:void(0)" class="dropbtn"><h3>AUTRES</h3></a>
           <div class="dropdown-content">
+            <a href="profilCTRL.php">PROFIL</a>
             <a href="donsCTRL.php">DONS</a>
             <a href="inventaireDesProduitsConsignesCTRL.php">INVENTAIRE DES PRODUITS CONSIGNÉS</a>
             <a href="evenementsCTRL.php">EVENEMENTS</a>
