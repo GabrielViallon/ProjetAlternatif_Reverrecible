@@ -19,5 +19,6 @@ CREATE TABLE demandePoint(
   nomLieu VARCHAR(25),
   adresse VARCHAR(40) PRIMARY KEY,
   type VARCHAR(30),
-  description TEXT
+  description TEXT,
+  email VARCHAR(30)
 );

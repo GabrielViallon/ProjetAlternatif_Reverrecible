@@ -39,7 +39,7 @@
         <p>En tant que membre, vous pouvez dès à présent nous suggérer un point de collecte en remplissant le formulaire suivant.</p>
         <fieldset>
 
-        <form action="../controle/inventaireDesProduitsConsignesCTRL.php" method="post" class="formulaire-points-consigne">
+        <form action="../Controleur/inventaireDesProduitsConsignesCTRL.php" method="post" class="formulaire-points-consigne">
           <input type="text" name="nomLieu" size="40" required placeholder="Nom du lieu" >
           <br>
           <input type="text" name="adresse"  size="40" required  placeholder="Adresse du lieu" >

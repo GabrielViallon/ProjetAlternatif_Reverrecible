@@ -5,6 +5,7 @@ class DemandePoint{
     private $adresse;
     private $type;
     private $description;
+    private $email;
     //////////////////declaration du constructeur//////////////////////
     public function __construct(array $param = array()) {
       foreach ($param as $key => $value) {
@@ -16,5 +17,6 @@ class DemandePoint{
     public function getAdresse(){return $this->adresse;}
     public function getType() {return $this->type;}
     public function getDescription(){return $this->description;}
+    public function getEMail() {return $this->email;}
   }
 ?>

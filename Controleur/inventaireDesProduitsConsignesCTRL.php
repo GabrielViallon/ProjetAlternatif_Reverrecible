@@ -9,14 +9,15 @@ if (isset($_POST['nomLieu'])
     $adresse = $_POST['adresse'];
     $type = $_POST['type'];
     $description = $_POST['description'];
+    $email = $_SESSION['mail'];
 
     $demande = $dao->getDemandePoint($adresse);
 
     if($demande == null) {
-      $param = array("nomLieu"=>$nomLieu,"adresse"=>$adresse,"type"=>$type,"description"=>$description);
+      $param = array("nomLieu"=>$nomLieu,"adresse"=>$adresse,"type"=>$type,"description"=>$description,"email"=>$email);
       $demande = new DemandePoint($param);
       $dao->addDemandePoint($demande);
-      header('Location: inventaireDesProduitsConsignes.php');
+      header('Location: inventaireDesProduitsConsignesCTRL.php?izfioah');
     }
   }
 

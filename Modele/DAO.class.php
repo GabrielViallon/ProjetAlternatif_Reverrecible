@@ -100,10 +100,11 @@
     public function addDemandePoint(demandePoint $demande){
       $nomLieu = $demande->getNomLieu();
       $adresse = $demande->getAdresse();
-      $type = $user->getType();
-      $description = $user->getDescription();
+      $type = $demande->getType();
+      $description = $demande->getDescription();
+      $email = $demande->getEMail();
 
-      $query = "INSERT INTO demandePoint VALUES ('$nomLieu','$adresse','$type','$description')";
+      $query = "INSERT INTO demandePoint VALUES ('$nomLieu','$adresse','$type','$description','$email')";
       $insertDemande=$this->db->query($query);
 
       return $insertDemande;
