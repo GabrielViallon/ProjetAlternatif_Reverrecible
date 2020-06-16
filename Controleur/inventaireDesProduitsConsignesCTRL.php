@@ -1,7 +1,9 @@
 <?php
 require_once('../Modele/DAO.class.php');
 $dao = new DAO;
+$demandes = $dao->getDemandesPoint(); // recuperer les demandes de la BD pour les afficher
 session_start();
+
 
 if (isset($_POST['nomLieu'])
   && isset($_POST['adresse']) && isset ($_POST['type']) && isset($_POST['description'])) {

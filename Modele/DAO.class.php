@@ -110,5 +110,16 @@
       return $insertDemande;
 
     }
+
+    public function getDemandesPoint(){
+      $query = "SELECT * FROM demandePoint";
+      $sql= $this->db->query($query);
+      $demandes = $sql->fetchAll(PDO::FETCH_ASSOC);
+      $listeDemandes = array();
+      foreach ($demandes as $demande) {
+        array_push($listeDemandes,new DemandePoint($demande));
+      }
+      return $listeDemandes;
+    }
   }
   ?>

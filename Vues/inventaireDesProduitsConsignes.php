@@ -35,7 +35,7 @@
     </article>
     <div class="separateur"></div>
     <article class="sousArticle">
-      <?php if (isset($_SESSION['nom'])) {?>
+      <?php if (isset($_SESSION['nom']) && isset($_SESSION['gerant']) && $_SESSION['gerant'] == 0) {?>
         <p>En tant que membre, vous pouvez dès à présent nous suggérer un point de collecte en remplissant le formulaire suivant.</p>
         <fieldset>
 
@@ -53,10 +53,31 @@
         <!-- <?php     global $confirmation; ?> -->
         <!-- <p style='color:green'> <?= $confirmation ?></p> -->
       </fieldset>
+    <?php } else if (isset($_SESSION['gerant']) && $_SESSION['gerant'] == 1) { ?>
+      <p>En tant que gérant, vous pouvez consulter les suggestions de points en attente et les approuver.</p>
+      <table>
+      <?php foreach ($demandes as $demande) { ?>
+        <tr>
+                  <?php
+                  $nomLieu = $demande->getNomLieu();
+                  $adresse = $demande->getAdresse();
+                  $type = $demande->getType();
+                  $description = $demande->getDescription();
+                  $email = $demande->getEMail();
+                   ?>
+
+                  <td><?=$nomLieu?></td>
+                  <td><?=$adresse?></td>
+                  <td><?=$type?></td>
+                  <td><?=$email?></td>
+                  <td><a href="supprimerDemandeCTRL?<?=$adresse?>">Supprimer</a></td>
+                  <?php } ?>
+        </tr>
       <?php } else { ?>
         <p>Connectez-vous afin d'accéder au formulaire pour nous renseigner un point de consigne.</p>
         <a class="bouton" href="../Controleur/connexionCTRL.php"><h3>SE CONNECTER</h3></a>
       <?php } ?>
+      <table>
     </article>
     <?php require 'footer.php' ?>
   </body>
