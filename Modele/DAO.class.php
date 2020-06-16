@@ -58,8 +58,10 @@
       $prenom = $user->getPrenom();
       $email = $user->getEMail();
       $mdp = $user->getMDP();
+      $gerant = $user->getGerant();
+      $dateinscription = $user->getDateInscription();
 
-      $query = "INSERT INTO user VALUES ('$email','$nom','$prenom','$mdp')";
+      $query = "INSERT INTO user VALUES ('$email','$nom','$prenom','$mdp','$gerant','$dateinscription')";
       $insertUser=$this->db->query($query);
 
       return $insertUser;

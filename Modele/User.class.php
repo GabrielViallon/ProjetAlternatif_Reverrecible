@@ -6,6 +6,8 @@
     protected $prenom;
     protected $email;
     protected $mdp;
+    protected $gerant;
+    protected $dateinscription;
 
     //////////////////declaration du constructeur//////////////////////
     public function __construct(array $param = array()) {
@@ -19,5 +21,7 @@
     public function getPrenom() {return $this->prenom;}
     public function getEMail() {return $this->email;}
     public function getMDP() {return $this->mdp;}
+    public function getGerant() {return $this->gerant;}
+    public function getDateInscription() {return $this->dateInscription;}
   }
   ?>

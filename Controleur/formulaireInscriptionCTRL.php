@@ -21,17 +21,20 @@ if (isset($_POST['email'])
   $nom = $_POST['nom'];
   $prenom = $_POST['prenom'];
   $mdp = $_POST['mdp'];
+  $gerant = 0;
+  $dateinscription = date("m/d/y");
 
   $user = $dao->getUser($email);
 
   if($user==null) {
-    $param = array("email"=>$email,"nom"=>$nom,"prenom"=>$prenom,"mdp"=>$mdp);
+    $param = array("email"=>$email,"nom"=>$nom,"prenom"=>$prenom,"mdp"=>$mdp, "gerant"=>$gerant, "dateInscription"=>$dateinscription);
     $user = new User($param);
     $dao->addUser($user);
 
     session_start();
     $_SESSION['mail'] = $user->getEMail();
     $_SESSION['prenom'] = $user->getPrenom();
+    $_SESSION['nom'] = $user->getNom();
     header('Location: profilCTRL.php?');
   } else {
     header('Location: formulaireInscriptionCTRL.php?erreur=1');
