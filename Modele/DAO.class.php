@@ -1,6 +1,7 @@
 <?php
   /////////////////////////DECLARATION DES CLASSES//////////////////////////////
   require_once('../Modele/User.class.php');
+  require_once('../Modele/Evenement.class.php');
   //////////////////////////////////////////////////////////////////////////////
   class DAO {
 
@@ -66,6 +67,17 @@
 
       return $insertUser;
 
+    }
+    //----------------------------------------------------------------------------
+    public function getEvenements(){
+      $query = "SELECT * FROM evenement ORDER BY dateEv";
+      $sql= $this->db->query($query);
+      $evenements = $sql->fetchAll(PDO::FETCH_ASSOC);
+      $listeEvenements = array();
+      foreach ($evenements as $evenement) {
+        array_push($listeEvenements,new Evenement($evenement));
+      }
+      return $listeEvenements;
     }
   }
   ?>

@@ -6,3 +6,11 @@ CREATE TABLE user(
   gerant SMALLINT,
   dateInscription DATE DEFAULT(date('now'))
 );
+
+CREATE TABLE evenement(
+  nom VARCHAR(30),
+  dateEv DATE,
+  description TEXT,
+  gerant VARCHAR(25),
+  PRIMARY KEY(nom,dateEv)
+);
