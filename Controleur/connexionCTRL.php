@@ -46,6 +46,7 @@ if (isset($_POST['email'])
         $_SESSION['mail'] = $user->getEMail();
         $_SESSION['prenom'] = $user->getPrenom();
         $_SESSION['nom'] = $user->getNom();
+        $_SESSION['gerant'] = $user->getGerant();
         // Affichage du profil
         header('Location: profilCTRL.php?');
       } else {
