@@ -329,3 +329,18 @@ form input[type=submit] {
   border-radius: 50%;
   border: 3px solid white;
 }
+
+table {
+ border-collapse:collapse;
+ width:90%;
+ }
+th, td {
+ border:1px solid black;
+ width:20%;
+ }
+td {
+ text-align:center;
+ }
+caption {
+ font-weight:bold
+ }
