@@ -46,13 +46,12 @@
                 </div>
                 <div class="sousArticle">
                   <!-- contenu -->
-                  <?=$actu->getDescription()?>
+                  <?=$evenement->getDescription()?>
                   <!-- nom de celui qui donne l'info -->
                   <p>Informations données par <?=$evenement->getGerant()?></p>
                 </div>
               </article>
             <br>
-          <?php }
-          require 'footer.php' ?>
+          <?php require 'footer.php' ?>
   </body>
 </html>

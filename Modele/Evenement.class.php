@@ -13,8 +13,8 @@ class Evenement{
     }
     //////////////////declaration des getter//////////////////////
     public function getNom() {return $this->nom;}
-    public function getDate(){return $this->dateAct;}
+    public function getDate(){return $this->dateEv;}
     public function getDescription() {return $this->description;}
-    public function getGerant(){return $this->coach;}
+    public function getGerant(){return $this->gerant;}
   }
 ?>
