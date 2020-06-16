@@ -37,9 +37,7 @@
                 <?php if (isset($_SESSION['prenom'])) {
                 $prenom = $_SESSION['prenom'];
                 echo '<h2 style="color:white;">' . $_SESSION['prenom'] . " " . $_SESSION['nom'] . '</h2>';}?></li>
-                <li> <div class="separateurP">
-                </div> </li>
-              <li><a href="#"><h3>INFORMATIONS DU COMPTE</h3></a></li>
+                <li> <div class="separateurP"></div> </li>
               <li><a href="deconnexionCTRL.php"><h3>DECONNEXION</h3></a></li>
             </ul>
 
@@ -53,15 +51,19 @@
               <?php if (isset($_SESSION['prenom'])) {
               $prenom = $_SESSION['prenom'];
               echo '<h2 style="color:white;">' . $_SESSION['prenom'] . " " . $_SESSION['nom'] . '</h2>';}?></li>
-              <li> <div class="separateurP">
-              </div> </li>
+              <li> <div class="separateurP"></div> </li>
             <li><a href="creationEvenementsCTRL.php"><h3>EVENEMENTS</h3></a></li>
             <li><a href="inventaireDesProduitsConsignesCTRL.php"><h3>DEMANDES DE POINTS</h3></a></li>
-            <li><a href="#"><h3>INFORMATIONS DU COMPTE</h3></a></li>
             <li><a href="deconnexionCTRL.php"><h3>DECONNEXION</h3></a></li>
           </ul>
 
         </div>
+        <article>
+          <div class="sousArticle">
+            <h2> <?= $_SESSION['prenom'] ?> <?= $_SESSION['nom'] ?> </h2>
+            <p>mail : <?= $_SESSION['mail'] ?> </p>
+          </div>
+        </article>
         <?php } else { ?>
           <p> <a style="color:#0099cc;" href="../Controleur/connexionCTRL.php">Connectez-vous</a> ou <a style="color:#0099cc;" href="../Controleur/formulaireInscriptionCTRL.php">inscrivez vous</a> pour acceder au profil.</p>
         <?php } ?>

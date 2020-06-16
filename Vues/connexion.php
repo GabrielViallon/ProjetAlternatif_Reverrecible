@@ -49,13 +49,13 @@
           <input type="submit" id="submit" value="Connexion">
           <!-- <p><a id="inscription" href="../controle/motDePasseOublie.ctrl.php">Mot de passe oublié ?</a></p> -->
           <br>
-        <a style='color:black' id="inscription" href="../Controleur/formulaireInscriptionCTRL.php">S'inscrire</a>
           <?php global $erreur; ?>
           <!-- <br>
           <br> -->
           <p style='color:red'> <?=$erreur ?></p>
         </fieldset>
       </form>
+      <p>Vous n'avez pas encore de compte ? <a style="color:#0099cc;" href="../Controleur/formulaireInscriptionCTRL.php">S'inscrire</a> </p>
     </div>
   </article>
     <?php require 'footer.php' ?>
