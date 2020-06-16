@@ -55,7 +55,7 @@
         <!-- <p style='color:green'> <?= $confirmation ?></p> -->
       </fieldset>
     <?php } else if (isset($_SESSION['gerant']) && $_SESSION['gerant'] == 1) { ?>
-      <p>En tant que gérant, vous pouvez consulter les suggestions de points en attente et les approuver.</p>
+      <p>En tant que gérant, vous pouvez consulter les suggestions de points en attente et les supprimer au fur et à mesure que les points correspondants sont ajoutés à la carte.</p>
       <?php if ($demandes != null) {?>
       <table>
       <tr>
