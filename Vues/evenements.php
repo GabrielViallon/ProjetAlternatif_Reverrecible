@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
       <link rel="stylesheet" href="../Vues/Style/main.css">
-    <title>Connexion - Reverrecible</title>
+    <title>Evenements - Reverrecible</title>
   </head>
   <body>
     <header>
@@ -32,6 +32,28 @@
     <h1>EVENEMENTS</h1>
     <div class="separateur"></div>
 
+  <?php if (isset($_SESSION['gerant']) && $_SESSION['gerant'] == 1) { ?>
+    <p>En tant que gérant, vous pouvez créer des événements à venir pour en prévenir les utilisateurs</p>
+
+    <article>
+      <div class="sousArticle">
+        <h2>Nouvel événement :</h2>
+          <fieldset>
+          <form action="evenementsCTRL.php" method="post" class="formulaire-inscription">
+            <input type="text" name="nom" size="40" required placeholder="Titre de l'événement" >
+            <br>
+            <input type="date" name="dateEv" required  placeholder="date" >
+            <br>
+            <br>
+            <textarea name="description" required placeholder="Description de l'événement" ></textarea>
+            <input type="submit" class="bouton" value="Créer l'événement">
+          </form>
+        </fieldset>
+    </div>
+    </article>
+    <div class="separateur"></div>
+    <?php } ?>
+
       <?php
       if(!empty($evenements)){
 
@@ -46,18 +68,17 @@
 
                   <article> <img style="max-width: 35px; margin-right: 10px;" src="../Vues/Style/icons8-bell-24.png" alt="un evenement">  <h2 style="margin:10px;"><?=$evenement->getNom()?></h2> - <h3 style="margin:10px;"><?=$date?></h3></article>
                   <!-- contenu -->
-                  <div class="separateurP"></div>
                   <p>
                   <?=$evenement->getDescription()?>
                   </p>
-                  <div class="separateurP"></div>
                   <!-- nom de celui qui donne l'info -->
                   <p>Informations données par <?=$evenement->getGerant()?></p>
                 </div>
                 </article>
+                <div class="separateur"></div>
               <?php } }
               else {
-                echo"aucun evenement de prévu pour l'instant";
+                echo"<article> aucun evenement de prévu pour l'instant </article>";
               }?>
           <?php require 'footer.php' ?>
   </body>

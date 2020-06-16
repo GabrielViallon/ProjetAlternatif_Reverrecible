@@ -108,9 +108,8 @@
       $insertDemande=$this->db->query($query);
 
       return $insertDemande;
-
     }
-
+    //----------------------------------------------------------------------------
     public function getDemandesPoint(){
       $query = "SELECT * FROM demandePoint";
       $sql= $this->db->query($query);
@@ -121,10 +120,39 @@
       }
       return $listeDemandes;
     }
-
+    //----------------------------------------------------------------------------
     public function suppDemandePoint($adresse){
       $suppDemandePoint = "DELETE FROM demandePoint WHERE adresse='$adresse'";
       return $this->db->query($suppDemandePoint);
     }
+    //----------------------------------------------------------------------------
+    public function getEvenement($evenement){
+      $query = "SELECT * FROM evenement WHERE nom='$nom' AND dateEv='$dateEv'";
+      $sql= $this->db->query($query);
+      $req = $sql->fetchAll(PDO::FETCH_ASSOC);
+      if($req != null) {
+        if(sizeof($req != 0)) {
+          $evenement = $req[0];
+          return new Evenement($evenement);
+        }
+        else {
+          $evenement = null;
+          return null;
+        }
+      }
+    }
+    //----------------------------------------------------------------------------
+    public function addEvenement(evenement $evenement){
+      $nom = $evenement->getNom();
+      $dateEv = $evenement->getDate();
+      $description = $evenement->getDescription();
+      $gerant = $evenement->getGerant();
+
+      $query = "INSERT INTO evenement VALUES ('$nom','$dateEv','$description','$gerant')";
+      $insertEvenement=$this->db->query($query);
+
+      return $insertEvenement;
+    }
+
   }
   ?>
