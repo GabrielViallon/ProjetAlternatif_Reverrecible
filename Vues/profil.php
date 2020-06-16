@@ -30,34 +30,21 @@
     <!-- <div>
       <img src="Style/HEADER_LANDSCAPE_Contact.jpg" alt="" align="center">
     </div> -->
-    <div class="container-profil">
-      <div class="informations-bar">
-
         <div class="profile">
-          <img class="photo-profil" src="../Vues/Style/LOGOS_METROPOLE.png">
-          <?php if (isset($_SESSION['prenom'])) {
-          $prenom = $_SESSION['prenom'];
-          echo '<h2 class="name">' . $_SESSION['prenom'] . " " . $_SESSION['nom'] . '</h1>';}?>
 
-          <ul class="informations-list">
-            <li class="information-profil active">ACTUALITES</li>
-            <li class="information-profil">A PROPOS</li>
-            <li class="information-profil">INFORMATIONS DU COMPTE</li>
+          <ul>
+            <li><img class="photo-profil" src="../Vues/Style/profilLogo.png">
+              <?php if (isset($_SESSION['prenom'])) {
+              $prenom = $_SESSION['prenom'];
+              echo '<h2 style="color:white;">' . $_SESSION['prenom'] . " " . $_SESSION['nom'] . '</h2>';}?></li>
+              <li> <div class="separateurP">
+              </div> </li>
+            <li><a href="evenementsCTRL.php"><h3>EVENEMENTS</h3></a></li>
+            <li><a href="evenementsCTRL.php"><h3>DEMANDES DE POINTS</h3></a></li>
+            <li><a href="evenementsCTRL.php"><h3>INFORMATIONS DU COMPTE</h3></a></li>
           </ul>
 
-
-
-          <!-- <?php echo $prenom;?> -->
-
         </div>
-      </div>
-      <a class="bouton-modifier-profil" href="../Controleur/editerMonProfilCTRL.php"><h3>MODIFIER MON PROFIL</h3></a>
-    </div>
-    <div class="contenu-profil">
-      <article>
-        <p></p>
-      </article>
-    </div>
     <?php require 'footer.php' ?>
   </body>
 </html>
