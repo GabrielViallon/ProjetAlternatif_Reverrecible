@@ -55,7 +55,19 @@
       </fieldset>
     <?php } else if (isset($_SESSION['gerant']) && $_SESSION['gerant'] == 1) { ?>
       <p>En tant que gérant, vous pouvez consulter les suggestions de points en attente et les approuver.</p>
+      <?php if ($demandes != null) {?>
       <table>
+      <tr>
+        <th>Nom du lieu</th>
+        <th>Adresse</th>
+        <th>Type de produit consigné</th>
+        <th>Description et détails</th>
+        <th>Email</th>
+        <th>Action</th>
+      </tr>
+    <?php } else {?>
+      <p style="color : red">Aucune demande de point disponible.</p>
+    <?php } ?>
       <?php foreach ($demandes as $demande) { ?>
         <tr>
                   <?php
@@ -69,6 +81,7 @@
                   <td><?=$nomLieu?></td>
                   <td><?=$adresse?></td>
                   <td><?=$type?></td>
+                  <td><?=$description?></td>
                   <td><?=$email?></td>
                   <td><a style="color : red" href="supprimerDemandeCTRL.php?demande=<?=$adresse?>">Supprimer</a></td>
                   <?php } ?>
