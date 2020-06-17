@@ -19,7 +19,7 @@
             <a href="profilCTRL.php">PROFIL</a>
             <a href="donsCTRL.php">DONS</a>
             <a href="inventaireDesProduitsConsignesCTRL.php">INVENTAIRE DES PRODUITS CONSIGNÉS</a>
-            <a href="evenementsCTRL.php">DÉFI RAMÈNE TA BOUTEILLE !</a>
+            <a href="evenementsCTRL.php">EVENEMENTS</a>
           </div>
         </li>
       </ul>
