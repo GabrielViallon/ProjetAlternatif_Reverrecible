@@ -77,7 +77,7 @@
     }
     //----------------------------------------------------------------------------
     public function getEvenements(){
-      $query = "SELECT * FROM evenement ORDER BY dateEv";
+      $query = "SELECT * FROM evenement ORDER BY dateEv DESC";
       $sql= $this->db->query($query);
       $evenements = $sql->fetchAll(PDO::FETCH_ASSOC);
       $listeEvenements = array();

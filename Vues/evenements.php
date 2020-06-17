@@ -64,10 +64,16 @@
         <?php
           $date = $evenement->getDate();
           $nom = $evenement->getNom();
+          $infoString = '';
+          if($date > date("Y-m-d")){
+            $infoString = '<b><i style="color:green;">À venir</i></b>';
+          } else {
+            $infoString = '<b><i style="color:red;">Déjà passé</i></b>';
+          }
         ?>
         <article>
           <div class="sousArticle fondGris">
-            <h1><?=$date?> - <?=$nom?></h1>
+            <p><?=$infoString?><h1 style="margin-bottom:0px;"><?=$date?> - <?=$nom?></h1></p>
             <p style="margin-left: 50px; font-size:85%;">par <b><i><?=$evenement->getGerant()?></i></b></p>
             <article>
               <p>
@@ -87,6 +93,6 @@
               else {
                 echo'<article class="sousArticle"><p style="color : red">' . " aucun événement de prévu pour l'instant !</p></article>";
               }?>
+              <?php require_once('footer.php'); ?>
             </body>
-            <?php require_once('footer.php'); ?>
 </html>
