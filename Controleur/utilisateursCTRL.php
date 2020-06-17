@@ -2,7 +2,12 @@
 session_start();
 require_once('../Modele/DAO.class.php');
 $dao = new DAO;
-$users = $dao->getAllUsers();
+if (isset($_POST['submit'])) {
+  $users = $dao->searchUser($_POST['search']);
+}
+else {
+  $users = $dao->getAllUsers();
+}
 if(isset($_SESSION['gerant']) && $_SESSION['gerant'] == 1) {
 require_once('../Vues/utilisateurs.php');
 }

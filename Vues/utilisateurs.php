@@ -28,8 +28,22 @@
     </header>
     <h1>LISTE DES UTILISATEURS</h1>
     <div class="separateur"></div>
-    <?php if ($users != null) {?>
-    <h2>La base de donnée comprend actuellement <?= count($users) ?> utilisateurs.</h2>
+    <?php if ($users != null) {
+      if(isset($_POST['search'])) {?>
+    <p>Recherche : "<?=$_POST['search']?>" : <?= count($users) ?> résultat(s).</p>
+  <?php } else { ?>
+    <p>La base de donnée comprend actuellement <?= count($users) ?> utilisateurs.</p>
+  <?php } ?>
+
+    <form method="post">
+      <label>Rechercher un utilisateur</label>
+      <input type="text" name="search">
+      <input type="submit" name="submit" value="RECHERCHER">
+    <?php if(isset($_POST['search'])) { ?>
+      <a class="bouton" href="../Controleur/utilisateursCTRL.php"><h3>ANNULER LA RECHERCHE</h3></a>
+    <?php } ?>
+    </form>
+
     <article class="sousArticle">
 
     <table>
@@ -41,7 +55,10 @@
       <th>Action</th>
     </tr>
   <?php } else {?>
-    <p style="color : red">Aucune demande de point disponible.</p>
+    <p style="color : red">Aucun utilisateur trouvé.</p>
+    <?php if(isset($_POST['search'])) { ?>
+      <a class="bouton" href="../Controleur/utilisateursCTRL.php"><h3>ANNULER LA RECHERCHE</h3></a>
+    <?php } ?>
   <?php } ?>
     <?php foreach ($users as $user) { ?>
       <tr>
