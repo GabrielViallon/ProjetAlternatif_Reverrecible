@@ -85,7 +85,7 @@ nav {
   top: 0px;
 }
 
-nav ul, .profile ul {
+nav ul {
   max-height: 120px;
   display:flex;
   flex-direction:row;
@@ -94,6 +94,16 @@ nav ul, .profile ul {
   margin: 0px;
   padding: 0px;
   background-color: #0093a9;
+}
+
+.profile ul{
+  max-height: 120px;
+  display:flex;
+  flex-direction:row;
+  justify-content:space-between;
+  list-style-type: none;
+  margin: 0px;
+  padding: 0px;
 }
 
 nav li, .profile li {
@@ -113,7 +123,19 @@ a {
   display: inline-block;
 }
 
-nav li a:hover, .dropdown:hover .dropbtn, .profile li a:hover{
+.profile a{
+  border-radius: 5px;
+  color: #1d758c;
+  padding: 10px;
+}
+
+.profile li a:hover {
+  color: white;
+  background-color: #4cb7db;
+  transition: background-color 70ms linear;
+}
+
+nav li a:hover, .dropdown:hover .dropbtn{
   border-bottom: 5px solid white;
 }
 
@@ -152,6 +174,7 @@ nav li a:hover, .dropdown:hover .dropbtn, .profile li a:hover{
 }
 
 .bouton:hover {
+  cursor: pointer;
   color: white;
   background-color: #4cb7db;
   transition: background-color 70ms linear;
@@ -300,7 +323,7 @@ form input[type=submit] {
 }
 
 .profile{
-  border-radius: 10px;
+  border-radius: 5px;
   background: #f7f7f7;
   margin: 20px;
   padding: 20px;
@@ -313,7 +336,7 @@ form input[type=submit] {
   justify-content: flex-start;
   background-color: #0093a9;
   align-items: center;
-  border-radius: 10px;
+  border-radius: 5px;
 }
 
 .profile-nom{
