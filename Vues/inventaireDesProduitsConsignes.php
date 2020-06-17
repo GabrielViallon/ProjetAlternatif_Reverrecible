@@ -84,7 +84,7 @@
                   <td><?=$type?></td>
                   <td><?=$description?></td>
                   <td><?=$email?></td>
-                  <td><a style="color : red" href="supprimerDemandeCTRL.php?demande=<?=$adresse?>">Supprimer</a></td>
+                  <td><a class="bouton "style="background-color : red" href="supprimerDemandeCTRL.php?demande=<?=$adresse?>"><img style="max-width:32px; max-height:32px;" src="../Vues/Style/icons8-supprimer-32.png" alt="supprimer"></a></td>
                   <?php } ?>
         </tr>
       <?php } else { ?>
