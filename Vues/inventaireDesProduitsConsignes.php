@@ -58,14 +58,15 @@
       <p>En tant que gérant, vous pouvez consulter les suggestions de points en attente et les supprimer au fur et à mesure que les points correspondants sont ajoutés à la carte.</p>
       <?php if ($demandes != null) {?>
       <table>
-      <tr>
-        <th>Nom du lieu</th>
-        <th>Adresse</th>
-        <th>Type de produit consigné</th>
-        <th>Description et détails</th>
-        <th>Email</th>
-        <th>Action</th>
-      </tr>
+          <tr>
+            <th>Nom du lieu</th>
+            <th>Adresse</th>
+            <th>Type de produit consigné</th>
+            <th>Description et détails</th>
+            <th>Email</th>
+            <th>Action</th>
+          </tr>
+
     <?php } else {?>
       <p style="color : red">Aucune demande de point disponible.</p>
     <?php } ?>

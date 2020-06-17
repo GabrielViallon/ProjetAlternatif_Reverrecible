@@ -357,22 +357,43 @@ form input[type=submit] {
   border: 3px solid white;
 }
 
-table {
- border-collapse:collapse;
- width:90%;
- margin-bottom: 50px;
- margin-top: 50px;
- }
-th, td {
- border:1px solid black;
- width:20%;
- }
+ table {
+   border-radius: 5px;
+  border-collapse:collapse;
+  width:90%;
+  margin-bottom: 50px;
+  margin-top: 50px;
+	overflow: hidden;
+  background-color: #f7f7f7;
+}
+
+th,
 td {
- text-align:center;
- }
-caption {
- font-weight:bold
- }
+	padding: 15px;
+}
+
+th {
+	text-align: left;
+  background-color: #4cb7db;
+  color: white;
+}
+
+thead th{
+		background-color: #0093a9;
+}
+
+tbody tr:hover{
+  background-color: rgba(128, 223, 255,0.3);
+}
+
+tbody td{
+		position: relative;
+  }
+
+tbody td:hover{
+				background-color: rgba(128, 223, 255,0.2);
+}
+
 
  .container-erreur {
    border: 1px solid black;
