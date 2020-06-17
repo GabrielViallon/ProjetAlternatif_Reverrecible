@@ -38,7 +38,7 @@
     <form method="post">
       <label>Rechercher un utilisateur</label>
       <input type="text" name="search">
-      <input type="submit" name="submit" value="RECHERCHER">
+      <input type="submit" class="bouton" name="submit" value="RECHERCHER">
     <?php if(isset($_POST['search'])) { ?>
       <a class="bouton" href="../Controleur/utilisateursCTRL.php"><h3>ANNULER LA RECHERCHE</h3></a>
     <?php } ?>
