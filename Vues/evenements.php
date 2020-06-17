@@ -67,8 +67,10 @@
           $infoString = '';
           if($date > date("Y-m-d")){
             $infoString = '<b><i style="color:green;">À venir</i></b>';
-          } else {
+          } else if($date < date("Y-m-d")){
             $infoString = '<b><i style="color:red;">Déjà passé</i></b>';
+          } else {
+            $infoString = "<b><i style=" . '"color:#0093a9;"' . ">Aujourd'hui</i></b>";
           }
         ?>
         <article>
