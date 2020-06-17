@@ -91,7 +91,7 @@
                 <div class="separateur"></div>
               <?php } }
               else {
-                echo'<article class="sousArticle"><p style="color : red">' . " aucun événement de prévu pour l'instant !</p></article>";
+                echo'<article class="sousArticle"><p style="color : red">' . " Aucun événement de prévu pour l'instant !</p></article>";
               }?>
               <?php require_once('footer.php'); ?>
             </body>
