@@ -28,16 +28,20 @@
     </header>
     <h1>VOTRE PROFIL</h1>
     <div class="separateur"></div>
-
         <?php if (isset($_SESSION['nom']) && isset($_SESSION['gerant']) && $_SESSION['gerant'] == 0) {?>
           <div class="profile">
+            <div class="profile-infos">
+              <img class="photo-profil" src="../Vues/Style/profilLogo.png">
+              <?php if (isset($_SESSION['prenom'])) {
+              $prenom = $_SESSION['prenom']; ?>
+              <div class="profile-nom">
+                <h1 style="color:white; margin:0px;"><?=$_SESSION['prenom']?> <?=$_SESSION['nom']?></h1>
+                <p><?=$_SESSION['mail']?></p>
+              </div>
+              <?php }?>
+            </div>
 
             <ul>
-              <li><img class="photo-profil" src="../Vues/Style/profilLogo.png">
-                <?php if (isset($_SESSION['prenom'])) {
-                $prenom = $_SESSION['prenom'];
-                echo '<h2 style="color:white;">' . $_SESSION['prenom'] . " " . $_SESSION['nom'] . '</h2>';}?></li>
-                <li> <div class="separateurP"></div> </li>
               <li><a href="deconnexionCTRL.php"><h3>DECONNEXION</h3></a></li>
             </ul>
 
@@ -47,12 +51,18 @@
         <h3>Vous êtes un(e) gérant(e) du site web</h3>
         <div class="profile">
 
+          <div class="profile-infos">
+            <img class="photo-profil" src="../Vues/Style/profilLogo.png">
+            <?php if (isset($_SESSION['prenom'])) {
+            $prenom = $_SESSION['prenom']; ?>
+            <div class="profile-nom">
+              <h1 style="color:white; margin:0px;"><?=$_SESSION['prenom']?> <?=$_SESSION['nom']?></h1>
+              <p><?=$_SESSION['mail']?></p>
+            </div>
+            <?php }?>
+          </div>
+
           <ul>
-            <li><img class="photo-profil" src="../Vues/Style/profilLogo.png">
-              <?php if (isset($_SESSION['prenom'])) {
-              $prenom = $_SESSION['prenom'];
-              echo '<h2 style="color:white;">' . $_SESSION['prenom'] . " " . $_SESSION['nom'] . '</h2>';}?></li>
-              <li> <div class="separateurP"></div> </li>
             <li><a href="evenementsCTRL.php"><h3>EVENEMENTS</h3></a></li>
             <li><a href="inventaireDesProduitsConsignesCTRL.php"><h3>DEMANDES DE POINTS</h3></a></li>
             <li><a href="utilisateursCTRL.php"><h3>UTILISATEURS</h3></a></li>
@@ -63,7 +73,7 @@
         <?php } else { ?>
           <article class="sousArticle">
             <p> <a style="color:#0099cc;" href="../Controleur/connexionCTRL.php">Connectez-vous</a> ou <a style="color:#0099cc;" href="../Controleur/formulaireInscriptionCTRL.php">inscrivez vous</a> pour acceder au profil.</p>
-          </article> 
+          </article>
         <?php } ?>
 
     <?php require_once('footer.php'); ?>

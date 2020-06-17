@@ -89,6 +89,7 @@ nav ul, .profile ul {
   max-height: 120px;
   display:flex;
   flex-direction:row;
+  justify-content:space-between;
   list-style-type: none;
   margin: 0px;
   padding: 0px;
@@ -298,12 +299,28 @@ form input[type=submit] {
   animation-iteration-count: 1;
 }
 
-.profile {
-  font-size: 80%;
+.profile{
+  border-radius: 10px;
+  background: #f7f7f7;
+  margin: 20px;
+  padding: 20px;
+}
+
+.profile-infos {
+  margin:20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
   background-color: #0093a9;
   align-items: center;
-  padding: 20px;
-  border-radius: 5px;
+  border-radius: 10px;
+}
+
+.profile-nom{
+  color:white;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
 }
 
 .photo-profil {
