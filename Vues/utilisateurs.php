@@ -46,7 +46,7 @@
       <label>Recherche par email</label>
       <input type="text" name="searchMail">
 
-      <input type="submit" name="submit" value="RECHERCHER">
+      <input type="submit" class="bouton" name="submit" value="RECHERCHER">
     <?php if(isset($_POST['searchName']) || isset($_POST['searchFirstName']) || isset($_POST['searchMail'])) { ?>
       <a class="bouton" href="../Controleur/utilisateursCTRL.php"><h3>ANNULER LA RECHERCHE</h3></a>
     <?php } ?>
