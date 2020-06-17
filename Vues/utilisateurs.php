@@ -36,7 +36,7 @@
   <?php } ?>
 
     <form method="post">
-<<<<<<< HEAD
+
       <label>Recherche par nom</label>
       <input type="text" name="searchName">
 
@@ -48,12 +48,6 @@
 
       <input type="submit" name="submit" value="RECHERCHER">
     <?php if(isset($_POST['searchName']) || isset($_POST['searchFirstName']) || isset($_POST['searchMail'])) { ?>
-=======
-      <label>Rechercher un utilisateur</label>
-      <input type="text" name="search">
-      <input type="submit" class="bouton" name="submit" value="RECHERCHER">
-    <?php if(isset($_POST['search'])) { ?>
->>>>>>> b1834cf0073b44ab5dd919f09bd564a931ab03c6
       <a class="bouton" href="../Controleur/utilisateursCTRL.php"><h3>ANNULER LA RECHERCHE</h3></a>
     <?php } ?>
     </form>
