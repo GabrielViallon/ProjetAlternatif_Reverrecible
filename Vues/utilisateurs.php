@@ -28,23 +28,23 @@
     </header>
     <h1>LISTE DES UTILISATEURS</h1>
     <div class="separateur"></div>
+
     <?php if ($users != null) {
       if(isset($_POST['search'])) {?>
-    <p>Recherche : "<?=$_POST['search']?>" : <?= count($users) ?> résultat(s).</p>
-  <?php } else { ?>
-    <p>La base de donnée comprend actuellement <?= count($users) ?> utilisateurs.</p>
+        <p>Recherche : "<?=$_POST['search']?>" : <?= count($users) ?> résultat(s).</p>
+      <?php } else { ?>
+        <p>La base de donnée comprend actuellement <?= count($users) ?> utilisateurs.</p>
+      <?php } ?>
+
+  <?php if(isset($_POST['search'])) { ?>
+    <a class="bouton" href="../Controleur/utilisateursCTRL.php"><h3>RETOUR À LA LISTE</h3></a>
   <?php } ?>
-
     <form method="post">
-
       <label>Rechercher un utilisateur</label>
       <input type="text" name="search">
-
       <input type="submit" class="bouton" name="submit" value="RECHERCHER">
-    <?php if(isset($_POST['search'])) { ?>
-      <a class="bouton" href="../Controleur/utilisateursCTRL.php"><h3>ANNULER LA RECHERCHE</h3></a>
-    <?php } ?>
     </form>
+
 
     <article class="sousArticle">
 
