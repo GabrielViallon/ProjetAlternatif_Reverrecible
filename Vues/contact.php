@@ -37,7 +37,7 @@
         <h2>CONTACT PAR E-MAIL</h2>
           <fieldset>
 
-          <form action="../controle/contact.ctrl.php" method="post" class="formulaire-email">
+          <form action="../Controleur/contactCTRL.php" method="post">
             <input type="email" name="email" size="40" required placeholder="E-mail" >
             <br>
             <input type="text" name="nom"  size="40" required  placeholder="Nom" >
@@ -48,8 +48,6 @@
             <br>
             <input type="submit" class="bouton" value="ENVOYER">
           </form>
-          <!-- <?php     global $confirmation; ?> -->
-          <!-- <p style='color:green'> <?= $confirmation ?></p> -->
         </fieldset>
     </div>
     </article>
