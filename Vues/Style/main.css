@@ -386,10 +386,6 @@ tbody tr:hover{
   background-color: rgba(128, 223, 255,0.3);
 }
 
-tbody td{
-		position: relative;
-  }
-
 
  .container-erreur {
    border: 1px solid black;
