@@ -31,6 +31,7 @@
       <img id="imgBackground" src="../Vues/Style/BackgroundModified.png" alt="image background">
     </div>
     <div class="separateur"></div>
+    <?php var_dump($_SESSION['gerant']) ?>
     <article>
       <div class="sousArticle">
       <h2 class="wow zoomIn">LA CONSIGNE DU RÉEMPLOI DU VERRE.<br>

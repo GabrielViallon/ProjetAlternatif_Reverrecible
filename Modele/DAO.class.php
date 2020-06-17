@@ -46,6 +46,7 @@
       if($req != null) {
         if(sizeof($req != 0)) {
           $utilisateur = $req[0];
+          $utilisateur['gerant'] = (int) $utilisateur['gerant'];
           return new User($utilisateur);
         }
         else {
