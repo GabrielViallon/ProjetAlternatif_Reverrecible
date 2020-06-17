@@ -57,7 +57,10 @@
                 <td><?=$mail?></td>
                 <td><?=$date?></td>
                 <?php if ($user->getGerant() != 1) {?>
-                <td><a style="color : red" href="supprimerUtilisateurCTRL.php?utilisateur=<?=$mail?>">Supprimer</a></td>
+                <td><a class="bouton" style="background-color: red;" href="supprimerUtilisateurCTRL.php?utilisateur=<?=$mail?>">
+                  <img style="max-width:32px; max-height:32px;" src="../Vues/Style/icons8-supprimer-32.png" alt="supprimer"></a>
+                <a class="bouton" style="background-color: green;" href="mailto:<?=$mail?>">
+                    <img style="max-width:32px; max-height:32px;" src="../Vues/Style/forward-32.png" alt="supprimer"></a></td>
               <?php } else {?>
                 <td><p>Impossible de supprimer un gérant.</p></td>
               <?php }}?>
