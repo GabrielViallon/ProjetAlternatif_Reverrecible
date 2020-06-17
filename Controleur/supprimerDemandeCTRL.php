@@ -7,6 +7,6 @@ $demande = $dao->suppDemandePoint($_GET['demande']);
 header("Location: ../Controleur/inventaireDesProduitsConsignesCTRL.php");
 }
 else {
-  header("Location: ../Controleur/erreurDroitsCTRL.php");
+  header("Location: ../Controleur/erreurDroitsCTRL.php?erreur=1");
 }
  ?>

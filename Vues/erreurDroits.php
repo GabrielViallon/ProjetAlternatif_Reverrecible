@@ -8,7 +8,11 @@
   <body>
     <div class="container-erreur">
       <img src="../Vues/Style/Logo.png" alt="">
-      <p>Vous ne disposez pas des droits nécessaires pour accéder à cette page.</p>
+      <?php if(isset($_GET['erreur'])) { ?>
+        <p><?= $erreur?></p>
+      <?php } else {?>
+      <p>Une erreur s'est produite.</p>
+    <?php } ?>
       <a style="color: black "href="../Controleur/mainCTRL.php">Retour au site</a>
     </div>
   </body>

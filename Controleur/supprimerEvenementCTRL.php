@@ -7,6 +7,6 @@ $evenement = $dao->suppEvenement($_GET['date'],$_GET['nom']);
 header("Location: ../Controleur/evenementsCTRL.php");
 }
 else {
-  header("Location: ../Controleur/erreurDroitsCTRL.php");
+  header("Location: ../Controleur/erreurDroitsCTRL.php?erreur=2");
 }
  ?>
