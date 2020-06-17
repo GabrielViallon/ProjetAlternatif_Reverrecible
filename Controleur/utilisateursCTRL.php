@@ -10,7 +10,7 @@ if (isset($_POST['submit'])) {
     $users = $dao->searchUserFirstName($_POST['searchFirstName']);
   }
   elseif(isset($_POST['searchMail'])) {
-    $users = $dao->searchUserMail($_POST['searchMail']);
+    $users = $dao->getUser($_POST['searchMail']);
   }
 }
 else {

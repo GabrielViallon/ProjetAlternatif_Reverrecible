@@ -61,16 +61,16 @@
       return $listeUtilisateurs;
     }
 
-    public function searchUserMail($userString){
-      $query = "SELECT * FROM user WHERE mail='$userString' ORDER BY nom";
-      $sql= $this->db->query($query);
-      $utilisateurs = $sql->fetchAll(PDO::FETCH_ASSOC);
-      $listeUtilisateurs = array();
-      foreach ($utilisateurs as $user ) {
-        array_push($listeUtilisateurs,new User($user));
-      }
-      return $listeUtilisateurs;
-    }
+    // public function searchUserMail($userString){
+    //   $query = "SELECT * FROM user WHERE mail='$userString' ORDER BY nom";
+    //   $sql= $this->db->query($query);
+    //   $utilisateurs = $sql->fetchAll(PDO::FETCH_ASSOC);
+    //   $listeUtilisateurs = array();
+    //   foreach ($utilisateurs as $user ) {
+    //     array_push($listeUtilisateurs,new User($user));
+    //   }
+    //   return $listeUtilisateurs;
+    // }
     //----------------------------------------------------------------------------
     public function getUser($email){
       $query = "SELECT * FROM user WHERE mail='$email'";
