@@ -21,13 +21,14 @@ if (isset($_POST['email'])
   $nom = $_POST['nom'];
   $prenom = $_POST['prenom'];
   $mdp = $_POST['mdp'];
+  $mdpHash = crypt($mdp);
   $gerant = 0;
   $dateinscription = date("Y-m-d");
 
   $user = $dao->getUser($email);
 
   if($user==null) {
-    $param = array("mail"=>$email,"nom"=>$nom,"prenom"=>$prenom,"mdp"=>$mdp, "gerant"=>$gerant, "dateinscription"=>$dateinscription);
+    $param = array("mail"=>$email,"nom"=>$nom,"prenom"=>$prenom,"mdp"=>$mdpHash, "gerant"=>$gerant, "dateinscription"=>$dateinscription);
     $user = new User($param);
     $dao->addUser($user);
 

@@ -35,7 +35,12 @@ if (isset($_POST['email'])
 
     // Vérification que le mail existe
     if ($user!=null) {
-      if ($user->getMDP()==$motdepasse) {
+
+      // if ($user->getMDP()==$motdepasse) {
+
+      if (hash_equals($user->getMDP(), crypt($motdepasse, $user->getMDP()))) {
+
+
         //recuperer le prenom du profil
         // if ($dao->estCoach($email)) {
         //   $adh = $dao->getCoach($email);
