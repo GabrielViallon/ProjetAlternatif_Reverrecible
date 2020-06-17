@@ -333,3 +333,19 @@ td {
 caption {
  font-weight:bold
  }
+
+ .container-erreur {
+   border: 1px solid black;
+   margin: auto auto;
+   width: 50%;
+   margin-top: 50vh;
+   transform: translateY(-50%);
+ }
+
+ .container-erreur p {
+   text-align: center;
+ }
+
+ .container-erreur a {
+   text-align: center;
+ }
