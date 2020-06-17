@@ -37,7 +37,7 @@
       VOTRE AVIS NOUS INTÉRESSE!</h2>
     </div>
     <div class="sousArticle">
-      <a class="bouton" href="../Controleur/connexionCTRL.php"><h3>ACCEDEZ AU QUESTIONNAIRE</h3></a>
+      <a class="bouton" href="../Controleur/votreAvisSurLaConsigneCTRL.php"><h3>ACCEDEZ AU QUESTIONNAIRE</h3></a>
     </div>
     </article>
     <div class="separateur"></div>
